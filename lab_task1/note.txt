@@ -1,0 +1,1 @@
+In the TZ_amplifier_dBGain.CSV file, you want the first column and the fifth column.
