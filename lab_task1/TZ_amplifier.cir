@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.0.0.3
 Key ID=Demo
-NLCnt=32
+NLCnt=31
 TXCnt=4
 
 [shapedef]
@@ -101,7 +101,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7425
-Used=27
+Used=25
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -113,7 +113,7 @@ Name=Current Source
 Definition=ISpice
 Shape=SPICE_I
 Mask=7681
-Used=2
+Used=1
 memo=Current Source
 Label Offset=15,12,-29,12
 PinCnt=2
@@ -125,7 +125,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=207
+Used=206
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -136,7 +136,6 @@ Name=Opamp
 Definition=Opamp
 Shape=Opamp5
 Mask=5121
-Used=1
 memo=Opamp
 Label Offset=44,29,-14,39
 PinCnt=5
@@ -163,7 +162,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6145
-Used=129
+Used=128
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -171,7 +170,7 @@ Pin="Plus",6,0,-10,-4
 Pin="Minus",0,0,-14,-4
 
 [Circuit]
-Window Placement=0,3, -1,-1, -4,-23, 44,44,1432,622
+Window Placement=0,3, -1,-1, -4,-23, 0,44,691,622
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -183,6 +182,7 @@ PowerFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
+Window Placement in AC Analysis=0,3, -1,-1, -4,-23, 66,66,1713,644
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -199,7 +199,7 @@ Show Grid Text=True
 
 [Comp]
 Name=Capacitor
-Px=336,512
+Px=608,504
 Rot=5
 
 [Attr]
@@ -218,7 +218,7 @@ V
 
 [Comp]
 Name=Current Source
-Px=544,456
+Px=680,456
 Rot=6
 
 [Attr]
@@ -227,7 +227,7 @@ V=I1
 Style=8192
 
 [Attr]
-ON=-183,-6,VALUE
+ON=-170,-27,VALUE
 V=DC 0 AC 1 0 Sin 0 10u 20k 0 0 0
 Style=8192
 
@@ -267,7 +267,7 @@ Style=256
 
 [Comp]
 Name=Ground
-Px=544,528
+Px=648,528
 Rot=7
 
 [Comp]
@@ -295,13 +295,13 @@ Rot=3
 Page=3
 
 [Attr]
-ON=-24,-27,VALUE
-V=12
+ON=-24,-41,PART
+V=V1
 Style=8192
 
 [Attr]
-ON=-24,-41,PART
-V=V1
+ON=-24,-27,VALUE
+V=12
 Style=8192
 
 [Comp]
@@ -317,13 +317,13 @@ Rot=3
 Page=3
 
 [Attr]
-ON=-28,-27,VALUE
-V=-12
+ON=-24,-41,PART
+V=V2
 Style=8192
 
 [Attr]
-ON=-24,-41,PART
-V=V2
+ON=-28,-27,VALUE
+V=-12
 Style=8192
 
 [Comp]
@@ -362,7 +362,7 @@ Style=8192
 
 [Attr]
 ON=18,20,RESISTANCE
-V=181k
+V=180k
 Style=8192
 
 [Attr]
@@ -370,40 +370,22 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=336,512,544,512
+Pxs=608,512,648,512
 
 [Wire]
-Pxs=544,504,544,512
+Pxs=680,504,680,512
 
 [Wire]
-Pxs=544,512,544,528
-
-[Wire]
-Pxs=544,512,680,512
-
-[Wire]
-Pxs=680,496,680,512
+Pxs=648,512,648,528
 
 [Wire]
 Pxs=680,496,720,496
 
 [Wire]
-Pxs=544,456,664,456
+Pxs=608,448,680,448
 
 [Wire]
-Pxs=664,448,664,456
-
-[Wire]
-Pxs=664,448,696,448
-
-[Wire]
-Pxs=336,440,336,464
-
-[Wire]
-Pxs=336,440,544,440
-
-[Wire]
-Pxs=544,440,544,456
+Pxs=608,448,608,456
 
 [Wire]
 Pxs=696,344,720,344
@@ -421,19 +403,34 @@ Pxs=696,376,720,376
 Pxs=696,376,696,448
 
 [Wire]
-Pxs=768,344,816,344
+Pxs=768,344,800,344
 
 [Wire]
-Pxs=816,344,816,376
+Pxs=800,344,800,376
 
 [Wire]
-Pxs=792,472,816,472
+Pxs=792,472,800,472
 
 [Wire]
-Pxs=768,376,816,376
+Pxs=768,376,800,376
 
 [Wire]
-Pxs=816,376,816,472
+Pxs=800,376,800,472
+
+[Wire]
+Pxs=680,496,680,504
+
+[Wire]
+Pxs=680,448,680,456
+
+[Wire]
+Pxs=680,448,696,448
+
+[Wire]
+Pxs=648,512,680,512
+
+[Wire]
+Pxs=608,504,608,512
 
 [Grid Text]
 Text="VC"
@@ -631,9 +628,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=151,295
+SB 3=236,202
 Scale 3=0.5
-Px=791,325
+Px=754,406
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -697,6 +694,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
+SB 0=18,19
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -796,6 +794,10 @@ Text=* .Model BJT1 NPN (RE=12 LOT/1/GAUSS=30% DEV/2/UNIFORM=2%)
 Text=*
 Text=* A .cir file is typically found in the data directory
 Text=*
+Text=*** From file C:\MC12demo\library\SMALL.LIB
+Text=.MODEL LF347 OPA (LEVEL=3 A=100K C=10P GBW=4MEG IBIAS=50.000001P IOFF=25P
+Text=+ ROUTAC=50 ROUTDC=75 SRN=17.5MEG SRP=13MEG TYPE=3 VCC=12 VEE=-12 VNS=-9.9
+Text=+ VOFF=5M VPS=9.9)
 
 [InfoPage]
 InfoPage=True
@@ -812,6 +814,330 @@ VariablizePaths=False
 DontShowPaths=False
 SimulationLog=True
 
+[AC]
+WinID=2
+Window Placement=0,3, -1,-1, -4,-23, 66,66,1713,644
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Title
+AutoTitle=Yes
+Grid Color=#808080
+Grid Weight=1
+Grid Pattern=Dot6
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Background=#FFFF00
+Baseline color=#0000FF
+BaseLine Weight=1
+CurveFit color=#FF0000
+CurveFit Weight=2
+CurveFit Pattern=Dash
+Static Grids=False
+PlusMark=False
+MinorLog25=Off
+LabelMinor=Off
+DataPoints=False
+Token=False
+Ruler=False
+XAxisGrids=True
+YAxisGrids=True
+MinorLogGrids=True
+BaseLine=False
+AlignZ=True
+Align Cursors=True
+TagFormatX=3
+TagFormatY=3
+FormulaFormat=2
+EndMode=SCALE
+Graph Background=#FFFFFF
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Cursor BranchInfo=False
+Horizontal Cursor=False
+Same Y Scales=Yes
+Enable X Scaling=True
+Enable Y Scaling=True
+Keep X Scales The Same=True
+Number of Grids X=5
+Number of Grids Y=5
+Cursor Select Color Primary=#C0C0C0
+Cursor Select Color Secondary=#FF0000
+Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Back=#FFFF00
+OperPoint=True
+AutoScaleRanges=False
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
+PrinterAutoTile=No
+PrinterBlackBorder=No
+MonMaxShow=3
+MonPageWidth=66
+MonPlotWidth=21
+MonExprXWidth=142
+MonExprYWidth=269
+MonRangeXWidth=90
+MonRangeYWidth=90
+AnimateWait=None
+AnimateWaitTime=500
+AnimatePressAfter=0
+Save_For_Future=No
+Reduce_Display=1
+Reduce_Save=1
+Reduce_ThrowDataOut=0
+Num Out Header Left
+Num Out Header Center="$MC\n$user\n$company\n$Analysis of $name\n$date $time"
+Num Out Header Right
+Num Out Delimiter=32
+Num Out Write=True
+Num Out Write Main Header=True
+Num Out Write Limits=True
+Num Out Write Branch Header=True
+Num Out Write Models=False
+Num Out Write Zero Models=True
+Num Out Write Undefined Models=True
+Num Out Write Operating Point=True
+Num Out Write Measurement Values=True
+Num Out Write Noise=True
+Num Out Write Values=True
+Num Out Write Waveform Header=True
+Num Out Allow Dup Y Expr=False
+Num Out Low="FMIN"
+Num Out High="FMAX"
+Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Format=3
+Num Out HideNonSelected=False
+Num Out UseActualDataPoints=False
+UserFileName="Z:\home\cameron\ece342\lab_task1\TZ_amplifier_Gain_dB.CSV"
+Wav SampleRate=11025
+Wav Nbits=16
+AutoSaveWave=False
+Wave Format=16E
+State Variables Format=5E
+Print Individual Pages=False
+
+[Tools]
+Pos=Top
+SELECT=Yes
+PAN=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=Yes
+POLYCLOS=No
+POLYOPEN=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+PTAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+START=Yes
+STOP=Yes
+PAUSE=Yes
+RESUME=No
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+LOG25=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+CLEAR_ACCUMULATED=Yes
+PDELETE_ALL_PLOTS=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+BOTTOM=Yes
+TOP=Yes
+WAVEFORMBUFFER=Yes
+AOUTPUT=Yes
+PKEY=Yes
+ENXSCALE=Yes
+ENYSCALE=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALE=Yes
+RESTORESCALE=No
+COLOR=Yes
+FONT=Yes
+SELNEXT=Yes
+NORMALIZE=No
+NORMALIZE_MIN=No
+NORMALIZE_MAX=No
+ADD_TAG_LEFT=No
+ADD_TAG_RIGHT=No
+ADD_HORZ_TAG=No
+ADD_VERT_TAG=No
+ALIGN_CURSORS=No
+ALIGN_CURSORSZ=No
+CURSORTOCLIPBOARD=No
+TRACKER_CURSOR=No
+TRACKER_CURSOR_BRANCHINFO=No
+TRACKER_INTERCEPT=No
+TRACKER_MOUSE=No
+TOFRONT=Yes
+TOBACK=Yes
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+LABEL_WAVEFORM=No
+LABEL_DATA_POINTS=No
+WFB_ADD_TO_LIMITS=No
+ENVELOPE=No
+SAMEYSCALES=No
+KEEPXSCALESTHESAME=No
+CURVEFIT=No
+ADD_MARKER=No
+SHOWWATCH=No
+BP=No
+TOGGLEMODE=No
+REMOVEALLTEXT=No
+AUTOSCALEX=No
+LABELALLMINOR=No
+ALIGNLEFT=Yes
+ALIGNRIGHT=Yes
+ALIGNTOP=Yes
+ALIGNBOTTOM=Yes
+
+[APage]
+Analysis=AC
+Name="MAIN"
+
+[Monte Carlo Options]
+Analysis=AC
+Status=Off
+Zero Tolerance=False
+Eliminate Outliers=False
+Distribution=Normal
+Number of Runs=10
+Seed=0
+
+[Limits]
+Analysis=AC
+FRange=100e3,10
+NPts=1001
+Temp=27
+MaxChng=5
+NInput=NONE
+NOutput=2
+Sweep type=Log
+StateVar=Zero
+RunOption=Normal
+Temperature Type=Linear
+Accumulate Plots=False
+IgnoreExprErrors=False
+FirstValueDisplay=Mag
+SecondValueDisplay=PhaseDeg
+DisplayValuesInProbe=DC
+
+[WaveForm]
+Analysis=AC
+Plt=1
+AliasID=1
+XExp=F
+YExp=v(3)/I(I1)
+XRng=AutoAlways
+YRng=AutoAlways
+Options=LINEARY
+WSP Title="v(3)/I(I1) vs F"
+WSP Checked=True
+WSP NOP=1001
+WSP Save Actual Data=True
+WSP Wav Order=0
+Enable=Enable
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=AC
+Plt=2
+AliasID=2
+XExp=F
+YExp=20*log10(v(3)/I(I1))
+XRng=AutoAlways
+YRng=AutoAlways
+Options=LINEARY
+WSP Title="20*log10(v(3)/I(I1)) vs F"
+WSP Checked=True
+WSP NOP=1001
+WSP Save Actual Data=True
+WSP Wav Order=0
+Enable=Enable
+Line Color=#FF0000
+Text Color=#FF0000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=AC
+AliasID=-1
+XRng=AutoAlways
+YRng=AutoAlways
+Options=LINEARY
+Enable=Enable
+Line Color=#008000
+Text Color=#008000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
 [Limits]
 Analysis=DynamicAC
 FirstValueDisplay=Mag
@@ -827,6 +1153,7 @@ Analysis=Transient
 
 [Pane]
 Analysis=AC
+CurrentPage 0="MAIN"
 
 [Pane]
 Analysis=DC
@@ -839,6 +1166,11 @@ Analysis=ImDistortion
 
 [Pane]
 Analysis=Stability
+
+[Watch]
+Analysis=AC
+Format=3
+ExprPercentWidth=80
 
 [WCTolerance]
 Var Width=100
