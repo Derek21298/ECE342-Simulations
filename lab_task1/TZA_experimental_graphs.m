@@ -2,12 +2,13 @@
 
 close all;
 
+% Array = csvread('TZA_experimental_f_response.csv');
 Array = csvread('TZA_experimental_f_response_FINAL.csv');
 frequency = Array(:,1);
 dB_gain = Array(:,2);
 
 semilogx(frequency, dB_gain, 'linewidth', 1.5);
-title('TZA Frequency Response');
+% title('TZA Frequency Response - R_{2} = 150k\Omega');
 ylabel('Gain, dB');
 xlabel('Frequency, Hz');
 hold on;

@@ -12,14 +12,18 @@ ohm_gain = Array2(:, 4) / 10e2;
 
 subplot(2,1,1);
 semilogx(frequency1, dB_gain, 'linewidth', 1.5);
-title('Transimpedance Amplifier Simulated Frequency Response');
+%title('Transimpedance Amplifier Simulated Frequency Response');
 xlabel('Frequency, Hz');
 ylabel('Gain, dB');
+hold on;
 grid on;
+f3db = interp1(dB_gain,frequency1,102.2)
+line([f3db f3db], [90 102.2],'linestyle', '--');
+hold off;
 
 subplot(2,1,2);
 semilogx(frequency2, ohm_gain, 'linewidth', 1.5);
-title('Transimpedance Amplifier Simulated Frequency Response');
+%title('Transimpedance Amplifier Simulated Frequency Response');
 xlabel('Frequency, Hz');
 ylabel('Gain, kilo-ohms');
 grid on;
