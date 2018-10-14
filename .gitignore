@@ -1,8 +1,10 @@
 *
-!*/
+!hw*/
+!lab*/
 !*.png
 !*.txt
 !*.cir
+!*.CIR
 !*.m
 !*.CSV
 !*.csv
