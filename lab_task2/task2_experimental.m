@@ -10,7 +10,7 @@ dB = array(:, 2) + 40;
 semilogx(freq, dB,'linewidth', 1.9);
 grid on;
 set(gca,'fontsize',20); % set font size
-title('MFBP Filter Experimental Frequency Response (2-stage)');
+%title('MFBP Filter Experimental Frequency Response (2-stage)');
 ylabel('Gain, dB');
 xlabel('Frequency, Hz');
 xlim([10e2 30e4]);
