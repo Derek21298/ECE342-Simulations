@@ -516,7 +516,7 @@ Style=8192
 
 [Attr]
 ON=13,-28,CAPACITANCE
-V=8n
+V=6.3n
 Style=8192
 
 [Attr]
@@ -535,7 +535,7 @@ Style=8192
 
 [Attr]
 ON=15,-31,CAPACITANCE
-V=8n
+V=6.3n
 Style=8192
 
 [Attr]
@@ -554,7 +554,7 @@ Style=8192
 
 [Attr]
 ON=16,-32,CAPACITANCE
-V=8n
+V=6.3n
 Style=8192
 
 [Attr]
@@ -805,7 +805,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="CMOS_simulation"
+Name="ring-oscillator"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -829,7 +829,7 @@ Scale 1=1
 Scale 2=1
 SB 3=46,0
 Scale 3=0.66666666666666663
-Px=681,307
+Px=484,501
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1058,6 +1058,9 @@ Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Num Out Format=3
 Num Out HideNonSelected=False
 Num Out UseActualDataPoints=False
+UserFileName="Z:\home\cameron\ece342\lab_task3\part3\ring-oscillator-transient.CSV"
+Wav SampleRate=11025
+Wav Nbits=16
 AutoSaveWave=False
 Wave Format=16E
 State Variables Format=5E
@@ -1406,7 +1409,7 @@ Seed=0
 
 [Limits]
 Analysis=Transient
-TMax=250u
+TMax=750u
 TStart=0
 TStep=10n
 NPts=51
@@ -1424,11 +1427,9 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(vO3)
-XRng=0.00025
-YRng=6
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARX,LINEARY
-Range Grid X=5e-5
-Range Grid Y=1.2
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1450,8 +1451,8 @@ Plt=1
 AliasID=2
 XExp=T
 YExp=v(vO1)
-XRng=Auto
-YRng=Auto
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=DontRun
 Line Color=#FF0000
@@ -1471,6 +1472,8 @@ NOFmtY=3E
 [WaveForm]
 Analysis=Transient
 AliasID=-1
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#008000
