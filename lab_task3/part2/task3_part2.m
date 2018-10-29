@@ -1,7 +1,4 @@
-%% Number 2
-%   Author: Derek Haas
-%   Date: 10-23-18
-%
+%% ECE 342 - Derek Haas and Cameron Sullivan - Lab Task 3 Part 2 MATLAB
 
 close all;
 
@@ -27,7 +24,11 @@ data = csvread('CMOS_transient_stage1.CSV');
 time = data(:, 1);
 stage1 = data(:, 2);
 
-plot(time * 1e3, stage1);
+plot(time * 1e3, stage1,'linewidth',1.8);
+set(gca,'fontsize',20);
+title('CMOS Inverter Transient Response');
+ylabel('v_{O}, Volts');
+xlabel('Time, ms');
 grid on;
 xlim([0.8 1.6]);
 
@@ -38,9 +39,9 @@ time = data(:, 1);
 stage1 = data(:, 2);
 
 figure(2);
-plot(time * 1e3, stage1);
+plot(time * 1e3, stage1,'linewidth',1.8);
 set(gca,'fontsize',20);
-title('Transient Simulation: Stage 1 and Stage 2');
+title('CMOS Transient Simulation: Stage 1 and Stage 2 Propagation Delay');
 xlabel('Time, ms');
 ylabel('V_{O}, Volts');
 grid on;
@@ -51,10 +52,7 @@ data = csvread('CMOS_transient_stage2.CSV');
 time = data(:, 1);
 stage2 = data(:, 2);
 
-plot(time * 1e3, stage2);
+plot(time * 1e3, stage2,'linewidth',1.8);
 xlim([999.965e-3 1000.1e-3]);
 
 legend('Stage 1', 'Stage 2');
-
-% ##################################
-% ADD INTERP1 TO GET 90% POINT OF FALL AND 10% POINT OF RISE.
