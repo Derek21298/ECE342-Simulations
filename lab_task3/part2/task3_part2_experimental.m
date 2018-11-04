@@ -29,10 +29,11 @@ output = csvread('cmos-transient-exper.csv');
 time = output(:,1);
 outputVoltage = output(:,2);
 
-plot(time, outputVoltage, 'Linewidth', 2);
+plot(time * 10e2, outputVoltage, 'Linewidth', 2);
+xlim([0 3]);
 grid on;
 set(gca, 'fontsize', 18);
 title('Experimental CMOS Inverter Transient Response');
 ylabel('V_{O1}, V');
-xlabel('Time, s');
+xlabel('Time, ms');
 hold on;
