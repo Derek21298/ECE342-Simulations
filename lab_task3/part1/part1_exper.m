@@ -9,8 +9,8 @@ outputVoltage = output(:,2);
 
 plot(inputVoltage, outputVoltage, 'Linewidth', 2);
 grid on;
-set(gca, 'fontsize', 16);
-title('Experimental NMOS Inverter VTC');
+set(gca, 'fontsize', 20);
+% title('Experimental NMOS Inverter VTC');
 xlabel('Vin, V');
 ylabel('Vout, V');
 
@@ -25,7 +25,7 @@ outputVoltage = output(:,2);
 plot(time * 10e2, outputVoltage, 'Linewidth', 2);
 xlim([-2.6 2.6]);
 grid on;
-set(gca, 'fontsize', 16);
-title('Experimental NMOS Inverter Transient Response');
+set(gca, 'fontsize', 20);
+% title('Experimental NMOS Inverter Transient Response');
 ylabel('Vout, V');
 xlabel('Time, ms');

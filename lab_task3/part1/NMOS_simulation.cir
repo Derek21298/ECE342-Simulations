@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.0.0.3
 Key ID=Demo
-NLCnt=53
+NLCnt=52
 TXCnt=3
 
 [shapedef]
@@ -93,7 +93,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6145
-Used=143
+Used=146
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -105,7 +105,7 @@ Name=NMOS
 Definition=NMOS
 Shape=NMOS
 Mask=5376
-Used=5
+Used=13
 memo=NMOS
 Label Offset=29,1,7,25
 PinCnt=4
@@ -119,7 +119,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=219
+Used=235
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -130,7 +130,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=33
+Used=39
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -142,7 +142,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7425
-Used=34
+Used=40
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -150,7 +150,7 @@ Pin="Plus",6,0,-3,-5
 Pin="Minus",0,0,-14,-5
 
 [Circuit]
-Window Placement=0,3, -1,-1, -4,-23, 0,0,1326,583
+Window Placement=0,3, -1,-1, 0,0, 0,0,1326,583
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -167,7 +167,7 @@ Window Placement in DC Analysis=0,3, -1,-1, -4,-23, 22,22,1669,605
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
-Show Nodes=True
+Show Nodes=False
 Show Voltages=False
 Show Current=False
 Show Power=False
@@ -180,9 +180,9 @@ Show Grid Text=True
 
 [Comp]
 Name=Resistor
-Px=248,144
+Px=248,168
 Rot=3
-COff=7,261,98,-80,4
+COff=7,261,122,-80,4
 
 [Attr]
 ON=-27,-35,PART
@@ -218,7 +218,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=248,144,248,176
+Pxs=248,168,248,176
 
 [Comp]
 Name=Ground
@@ -229,17 +229,17 @@ Rot=7
 Pxs=248,240,248,248
 
 [Wire]
-Pxs=248,80,248,96
+Pxs=248,112,248,120
 
 [Comp]
 Name=Voltage Source
-Px=416,216
+Px=400,216
 Rot=3
-COff=7,152,175,29,32
+COff=7,136,175,29,32
 
 [Attr]
 ON=17,-31,PART
-V=VDD1
+V=5V
 Style=8192
 
 [Attr]
@@ -281,16 +281,16 @@ V=DC 5 AC 1 0
 Style=256
 
 [Wire]
-Pxs=416,80,416,168
+Pxs=400,112,400,168
 
 [Wire]
-Pxs=248,80,416,80
+Pxs=248,112,400,112
 
 [Wire]
-Pxs=416,216,416,296
+Pxs=400,216,400,296
 
 [Wire]
-Pxs=248,296,416,296
+Pxs=248,296,400,296
 
 [Wire]
 Pxs=176,216,224,216
@@ -396,9 +396,9 @@ Rot=7
 
 [Comp]
 Name=Resistor
-Px=504,272
+Px=496,240
 Rot=3
-COff=7,45,-54,-80,4
+COff=7,37,-86,-80,4
 
 [Attr]
 ON=-30,-31,PART
@@ -416,9 +416,9 @@ V
 
 [Comp]
 Name=NMOS
-Px=480,344
+Px=472,312
 Rot=4
-COff=23,8,75,119,-74
+COff=23,0,43,119,-74
 
 [Attr]
 ON=-10,-26,PART
@@ -434,28 +434,28 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=504,272,504,296
+Pxs=496,240,496,264
 
 [Comp]
 Name=Ground
-Px=504,432
+Px=496,360
 Rot=7
 
 [Wire]
-Pxs=504,368,504,376
+Pxs=496,336,496,344
 
 [Wire]
-Pxs=504,208,504,224
+Pxs=496,176,496,192
 
 [Comp]
 Name=Voltage Source
-Px=680,344
+Px=632,312
 Rot=3
-COff=7,-56,23,29,32
+COff=7,-104,-9,29,32
 
 [Attr]
 ON=20,-30,PART
-V=VDD2
+V=5V
 Style=8192
 
 [Attr]
@@ -497,38 +497,35 @@ V=DC 5 AC 1 0
 Style=256
 
 [Wire]
-Pxs=680,208,680,296
+Pxs=632,176,632,264
 
 [Wire]
-Pxs=504,208,680,208
+Pxs=496,176,632,176
 
 [Wire]
-Pxs=680,344,680,424
+Pxs=632,312,632,360
 
 [Wire]
-Pxs=504,424,680,424
+Pxs=496,360,632,360
 
 [Wire]
-Pxs=376,344,456,344
+Pxs=368,312,448,312
 
 [Wire]
-Pxs=504,424,504,432
+Pxs=496,312,512,312
 
 [Wire]
-Pxs=504,344,520,344
+Pxs=512,312,512,344
 
 [Wire]
-Pxs=520,344,520,376
+Pxs=496,344,512,344
 
 [Wire]
-Pxs=504,376,520,376
-
-[Wire]
-Pxs=504,376,504,424
+Pxs=496,344,496,360
 
 [Comp]
 Name=Capacitor
-Px=608,360
+Px=568,328
 Rot=5
 
 [Attr]
@@ -546,24 +543,24 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=504,296,592,296
+Pxs=496,264,536,264
 
 [Wire]
-Pxs=608,296,608,312
+Pxs=568,264,568,280
 
 [Wire]
-Pxs=504,296,504,320
+Pxs=496,264,496,288
 
 [Comp]
 Name=Ground
-Px=608,360
+Px=568,328
 Rot=7
 
 [Wire]
-Pxs=376,176,376,344
+Pxs=368,176,368,312
 
 [Wire]
-Pxs=312,176,376,176
+Pxs=312,176,368,176
 
 [Wire]
 Pxs=248,176,248,192
@@ -572,17 +569,17 @@ Pxs=248,176,248,192
 Pxs=312,176,312,184
 
 [Wire]
-Pxs=456,344,480,344
-
-[Wire]
 Pxs=296,176,312,176
 
 [Wire]
-Pxs=592,296,608,296
+Pxs=536,264,568,264
+
+[Wire]
+Pxs=448,312,472,312
 
 [Grid Text]
 Text="vI2"
-Px=456,344
+Px=448,312
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -598,7 +595,7 @@ CBorder=None
 
 [Grid Text]
 Text="vO2"
-Px=592,296
+Px=536,264
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -767,7 +764,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=0.66666666666666663
-Px=73,292
+Px=176,260
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000

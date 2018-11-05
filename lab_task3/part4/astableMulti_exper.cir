@@ -7,8 +7,16 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.0.0.3
 Key ID=Demo
-NLCnt=73
-TXCnt=3
+NLCnt=81
+TXCnt=4
+
+[shapedef]
+Name=Capacitor
+Line=0,0,22,0
+Line=22,-8,22,8
+Line=26,-8,26,8
+Line=26,0,48,0
+Current=32,12,16,12
 
 [shapedef]
 Name=Ground
@@ -60,6 +68,23 @@ PolyLine=20,0
 Current=32,-4,24,-4
 
 [shapedef]
+Name=Resistor
+PolyOpen=12
+PolyLine=0,0
+PolyLine=0,0
+PolyLine=12,0
+PolyLine=14,-4
+PolyLine=18,4
+PolyLine=22,-4
+PolyLine=26,4
+PolyLine=30,-4
+PolyLine=34,4
+PolyLine=36,0
+PolyLine=48,0
+PolyLine=48,0
+Current=32,8,16,8
+
+[shapedef]
 Name=SPICE_V
 Root="Vsource.root",0,0,0
 
@@ -78,7 +103,7 @@ Name=NMOS
 Definition=NMOS
 Shape=NMOS
 Mask=5376
-Used=10
+Used=13
 memo=NMOS
 Label Offset=29,1,7,25
 PinCnt=4
@@ -92,7 +117,7 @@ Name=PMOS
 Definition=PMOS
 Shape=PMOS
 Mask=4096
-Used=3
+Used=6
 memo=PMOS
 Label Offset=29,0,-18,26
 PinCnt=4
@@ -106,7 +131,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=38
+Used=39
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -118,14 +143,38 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=231
+Used=235
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
 Pin="PinA",0,0,-3,-7
 
+[compdef]
+Name=Capacitor
+Definition=Capacitor
+Shape=Capacitor
+Mask=7425
+Used=40
+memo=Capacitor
+Label Offset=16,12,12,12
+PinCnt=2
+Pin="Plus",6,0,-3,-5
+Pin="Minus",0,0,-14,-5
+
+[compdef]
+Name=Resistor
+Definition=Resistor
+Shape=Resistor
+Mask=6145
+Used=146
+memo=Resistor
+Label Offset=18,6,8,11
+PinCnt=2
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
+
 [Circuit]
-Window Placement=0,3, -1,-1, -4,-23, 110,110,1498,688
+Window Placement=0,3, -1,-1, -4,-23, 132,132,1520,710
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -153,7 +202,7 @@ Show Grid Text=True
 
 [Comp]
 Name=NMOS
-Px=600,448
+Px=552,456
 Rot=4
 
 [Attr]
@@ -171,7 +220,7 @@ V
 
 [Comp]
 Name=PMOS
-Px=600,352
+Px=552,360
 
 [Attr]
 ON=29,0,PART
@@ -187,31 +236,31 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=624,376,624,392
+Pxs=576,384,576,400
 
 [Wire]
-Pxs=624,352,656,352
+Pxs=576,360,600,360
 
 [Wire]
-Pxs=656,312,656,352
+Pxs=600,320,600,360
 
 [Wire]
-Pxs=624,312,656,312
+Pxs=576,320,600,320
 
 [Wire]
-Pxs=624,272,624,312
+Pxs=576,248,576,320
 
 [Wire]
-Pxs=624,312,624,328
+Pxs=576,320,576,336
 
 [Comp]
 Name=Voltage Source
-Px=696,328
+Px=648,304
 Rot=3
 
 [Attr]
-ON=-33,-32,PART
-V=5V
+ON=-45,-31,PART
+V=VDD
 Style=8192
 
 [Attr]
@@ -253,45 +302,45 @@ V=DC 5 AC 1 0
 Style=256
 
 [Wire]
-Pxs=624,272,696,272
+Pxs=576,248,648,248
 
 [Comp]
 Name=Ground
-Px=696,336
+Px=648,312
 Rot=7
 
 [Comp]
 Name=Ground
-Px=624,496
+Px=576,520
 Rot=7
 
 [Wire]
-Pxs=576,352,600,352
+Pxs=528,360,552,360
 
 [Wire]
-Pxs=576,352,576,400
+Pxs=528,360,528,408
 
 [Wire]
-Pxs=576,448,600,448
+Pxs=528,456,552,456
 
 [Wire]
-Pxs=624,472,624,488
+Pxs=576,480,576,496
 
 [Wire]
-Pxs=624,448,648,448
+Pxs=576,456,600,456
 
 [Wire]
-Pxs=648,448,648,488
+Pxs=600,456,600,496
 
 [Wire]
-Pxs=624,488,648,488
+Pxs=576,496,600,496
 
 [Wire]
-Pxs=624,488,624,496
+Pxs=576,496,576,520
 
 [Comp]
 Name=NMOS
-Px=744,448
+Px=696,456
 Rot=4
 
 [Attr]
@@ -309,7 +358,7 @@ V
 
 [Comp]
 Name=PMOS
-Px=744,352
+Px=696,360
 
 [Attr]
 ON=29,0,PART
@@ -325,52 +374,52 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=768,376,768,392
+Pxs=720,384,720,400
 
 [Wire]
-Pxs=768,352,792,352
+Pxs=720,360,744,360
 
 [Wire]
-Pxs=792,312,792,352
+Pxs=744,320,744,360
 
 [Wire]
-Pxs=768,312,792,312
+Pxs=720,320,744,320
 
 [Wire]
-Pxs=768,312,768,328
+Pxs=720,320,720,336
 
 [Comp]
 Name=Ground
-Px=768,496
+Px=720,520
 Rot=7
 
 [Wire]
-Pxs=720,352,744,352
+Pxs=672,360,696,360
 
 [Wire]
-Pxs=720,352,720,392
+Pxs=672,360,672,400
 
 [Wire]
-Pxs=720,448,744,448
+Pxs=672,456,696,456
 
 [Wire]
-Pxs=768,472,768,488
+Pxs=720,480,720,496
 
 [Wire]
-Pxs=768,448,792,448
+Pxs=720,456,744,456
 
 [Wire]
-Pxs=792,448,792,488
+Pxs=744,456,744,496
 
 [Wire]
-Pxs=768,488,792,488
+Pxs=720,496,744,496
 
 [Wire]
-Pxs=768,488,768,496
+Pxs=720,496,720,520
 
 [Comp]
 Name=NMOS
-Px=848,448
+Px=848,456
 Rot=4
 
 [Attr]
@@ -388,7 +437,7 @@ V
 
 [Comp]
 Name=PMOS
-Px=848,352
+Px=848,360
 
 [Attr]
 ON=29,0,PART
@@ -404,132 +453,170 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=872,376,872,392
+Pxs=872,384,872,400
 
 [Wire]
-Pxs=872,352,896,352
+Pxs=872,360,896,360
 
 [Wire]
-Pxs=896,312,896,352
+Pxs=896,320,896,360
 
 [Wire]
-Pxs=872,312,896,312
+Pxs=872,320,896,320
 
 [Wire]
-Pxs=872,272,872,312
+Pxs=872,320,872,336
 
 [Comp]
 Name=Ground
-Px=872,496
+Px=872,520
 Rot=7
 
 [Wire]
-Pxs=824,352,848,352
+Pxs=824,360,848,360
 
 [Wire]
-Pxs=824,352,824,392
+Pxs=824,360,824,400
 
 [Wire]
-Pxs=824,448,848,448
+Pxs=824,456,848,456
 
 [Wire]
-Pxs=872,472,872,488
+Pxs=872,480,872,496
 
 [Wire]
-Pxs=872,448,896,448
+Pxs=872,456,896,456
 
 [Wire]
-Pxs=896,448,896,488
+Pxs=896,456,896,496
 
 [Wire]
-Pxs=872,488,896,488
+Pxs=872,496,896,496
 
 [Wire]
-Pxs=872,488,872,496
+Pxs=872,496,872,520
 
 [Wire]
-Pxs=696,328,696,336
+Pxs=648,304,648,312
 
 [Wire]
-Pxs=696,272,768,272
+Pxs=648,248,720,248
 
 [Wire]
-Pxs=768,272,872,272
+Pxs=720,248,872,248
 
 [Wire]
-Pxs=768,392,784,392
+Pxs=872,248,872,320
 
 [Wire]
-Pxs=768,392,768,424
+Pxs=720,400,736,400
 
 [Wire]
-Pxs=624,392,656,392
+Pxs=720,400,720,432
 
 [Wire]
-Pxs=624,392,624,424
+Pxs=824,400,824,456
 
 [Wire]
-Pxs=720,392,720,448
+Pxs=576,400,600,400
 
 [Wire]
-Pxs=536,400,576,400
+Pxs=576,400,576,432
 
 [Wire]
-Pxs=576,400,576,448
+Pxs=672,400,672,456
 
 [Wire]
-Pxs=656,392,720,392
+Pxs=528,408,528,456
 
 [Wire]
-Pxs=872,392,896,392
+Pxs=872,400,912,400
 
 [Wire]
-Pxs=872,392,872,424
+Pxs=872,400,872,432
 
 [Wire]
-Pxs=696,336,696,344
+Pxs=944,208,944,400
 
 [Wire]
-Pxs=872,312,872,328
+Pxs=520,208,776,208
+
+[Wire]
+Pxs=520,208,520,408
+
+[Wire]
+Pxs=520,408,528,408
 
 [Comp]
-Name=Voltage Source
-Px=536,448
-Rot=3
+Name=Capacitor
+Px=776,328
+Rot=5
 
 [Attr]
-ON=-29,-27,PART
-V=vin
+ON=-27,-30,PART
+V=C4
 Style=8192
 
 [Attr]
-ON=-82,-41,VALUE
-V=DC 5 AC 1 0
+ON=16,-31,CAPACITANCE
+V=220p
+Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
+[Wire]
+Pxs=776,328,776,400
+
+[Wire]
+Pxs=776,400,824,400
+
 [Comp]
-Name=Ground
-Px=536,448
-Rot=7
+Name=Resistor
+Px=840,208
+
+[Attr]
+ON=14,-22,PART
+V=R1
+Style=8192
+
+[Attr]
+ON=10,10,RESISTANCE
+V=110k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
 
 [Wire]
-Pxs=824,392,824,448
+Pxs=776,208,840,208
 
 [Wire]
-Pxs=696,272,696,280
+Pxs=888,208,944,208
 
 [Wire]
-Pxs=768,272,768,312
+Pxs=912,400,944,400
 
 [Wire]
-Pxs=784,392,824,392
+Pxs=736,400,776,400
+
+[Wire]
+Pxs=600,400,672,400
+
+[Wire]
+Pxs=720,248,720,320
+
+[Wire]
+Pxs=648,248,648,256
+
+[Wire]
+Pxs=776,208,776,280
 
 [Grid Text]
-Text="vO1"
-Px=656,392
+Text="vout"
+Px=912,400
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -537,15 +624,23 @@ CBorder=None
 
 [Grid Text]
 Text="vO2"
-Px=784,392
+Px=736,400
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
 [Grid Text]
-Text="vO3"
-Px=896,392
+Text="vO1"
+Px=600,400
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="vin"
+Px=496,400
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -559,7 +654,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.5
+Scale=0.66666666666666663
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -691,7 +786,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="CMOS_experimental"
+Name="circuit3"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -713,9 +808,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=409,155
-Scale 3=0.5
-Px=497,282
+SB 3=330,111
+Scale 3=0.66666666666666663
+Px=569,150
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000

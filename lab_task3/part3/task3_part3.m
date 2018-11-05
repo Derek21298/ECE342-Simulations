@@ -10,7 +10,7 @@ Vout = data(:, 2);
 
 plot(time * 10e5, Vout, 'linewidth', 2);
 set(gca,'fontsize',20);
-title('Ring Oscillator Transient Response');
+% title('Ring Oscillator Transient Response');
 ylabel('v_{out}, Volts');
 xlabel('Time, Microseconds');
 grid on;

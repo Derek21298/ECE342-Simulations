@@ -10,9 +10,9 @@ Vout = data(:, 3);
 
 figure(1);
 
-plot(Vin, Vout);
+plot(Vin, Vout, 'linewidth', 2);
 set(gca,'fontsize',20);
-title('Simulated Voltage Transfer Characteristic of the 3-Stage CMOS Inverter');
+% title('Simulated Voltage Transfer Characteristic of the 3-Stage CMOS Inverter');
 xlabel('V_{I}, Volts')
 ylabel('V_{O}, Volts');
 grid on;
@@ -24,9 +24,9 @@ data = csvread('CMOS_transient_stage1.CSV');
 time = data(:, 1);
 stage1 = data(:, 2);
 
-plot(time * 1e3, stage1,'linewidth',1.8);
+plot(time * 1e3, stage1,'linewidth',2);
 set(gca,'fontsize',20);
-title('CMOS Inverter Transient Response');
+% title('CMOS Inverter Transient Response');
 ylabel('v_{O}, Volts');
 xlabel('Time, ms');
 grid on;

@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.0.0.3
 Key ID=Demo
-NLCnt=81
-TXCnt=3
+NLCnt=80
+TXCnt=4
 
 [shapedef]
 Name=Capacitor
@@ -173,7 +173,7 @@ Pin="Plus",6,0,-10,-4
 Pin="Minus",0,0,-14,-4
 
 [Circuit]
-Window Placement=0,3, -1,-1, 0,0, 22,22,1374,605
+Window Placement=0,3, -1,-1, -4,-23, 22,22,1374,605
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -260,8 +260,8 @@ Px=336,176
 Rot=3
 
 [Attr]
-ON=-45,-31,PART
-V=VDD
+ON=-34,-32,PART
+V=5V
 Style=8192
 
 [Attr]
@@ -531,7 +531,7 @@ Pxs=360,272,360,328
 Pxs=216,280,216,328
 
 [Wire]
-Pxs=560,272,600,272
+Pxs=560,272,632,272
 
 [Wire]
 Pxs=560,272,560,304
@@ -554,12 +554,12 @@ Px=464,200
 Rot=5
 
 [Attr]
-ON=12,-26,PART
-V=C4
+ON=-27,-30,PART
+V=C1
 Style=8192
 
 [Attr]
-ON=12,-40,CAPACITANCE
+ON=15,-32,CAPACITANCE
 V=230p
 Style=8192
 
@@ -607,9 +607,6 @@ Pxs=336,112,336,128
 Pxs=464,80,464,152
 
 [Wire]
-Pxs=600,272,632,272
-
-[Wire]
 Pxs=424,272,464,272
 
 [Wire]
@@ -617,7 +614,7 @@ Pxs=288,272,360,272
 
 [Grid Text]
 Text="vout"
-Px=600,272
+Px=648,272
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -639,6 +636,14 @@ JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
+[Grid Text]
+Text="vin"
+Px=160,280
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
 [Schematic]
 CurrentSection 0=0
 CurrentSection 1=0
@@ -647,7 +652,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.66666666666666663
+Scale=0.5
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -801,9 +806,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=33,7
-Scale 3=0.66666666666666663
-Px=380,155
+SB 3=64,44
+Scale 3=0.5
+Px=91,197
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000

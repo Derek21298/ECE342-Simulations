@@ -15,7 +15,7 @@ figure(1);
 
 plot(time * 10e5, Vout, 'linewidth', 2);
 set(gca,'fontsize',20)
-title('Astable Multivibrator Transient Response');
+% title('Astable Multivibrator Transient Response');
 xlabel('Time, Microseconds')
 ylabel('v_{out}, Volts');
 grid on;
