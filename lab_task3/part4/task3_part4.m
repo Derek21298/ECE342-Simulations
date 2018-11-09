@@ -6,6 +6,7 @@
 close all;
 
 %% Plot astable multivibrator transient response
+close all;
 
 data = csvread('astableMulti_transient.CSV');
 time = data(:, 1);
@@ -20,3 +21,5 @@ xlabel('Time, Microseconds')
 ylabel('v_{out}, Volts');
 grid on;
 ylim([-1 6]);
+
+text(21,5.5, 'f = 20.1 kHz, DC = 48.1 %', 'FontSize', 20);

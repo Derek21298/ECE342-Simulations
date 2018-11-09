@@ -19,18 +19,28 @@ grid on;
 ylim([-1 6])
 
 %% Plot transient response of stage 1.
+close all;
 
-data = csvread('CMOS_transient_stage1.CSV');
-time = data(:, 1);
-stage1 = data(:, 2);
+input = csvread('cmos-sim-trans-stage1-input.csv');
+time = input(:, 1);
+vin = input(:, 2);
+output = csvread('cmos-sim-trans-stage1-output.csv');
+time = input(:, 1);
+vout = output(:, 2);
 
-plot(time * 1e3, stage1,'linewidth',2);
+plot(time * 1e3, vin,'linewidth',2);
+hold on;
+plot(time * 1e3, vout,'linewidth',2);
 set(gca,'fontsize',20);
 % title('CMOS Inverter Transient Response');
 ylabel('v_{O}, Volts');
 xlabel('Time, ms');
 grid on;
 xlim([0.8 1.6]);
+
+legend('vI','vO1');
+
+hold off;
 
 %% Plot Output of Stage 1 and Stage 2 to determine propagation delay.
 

@@ -50,7 +50,7 @@ data = csvread('NMOS_VTC_4k4.CSV');
 Vout = data(:, 1);
 Vgs = data(:, 3);
 
-% figure(2);
+figure(3);
 
 plot(Vout, Vgs, 'linewidth', 2);
 set(gca,'fontsize',20);
@@ -66,7 +66,7 @@ data = csvread('NMOS_VTC_100k.CSV');
 Vout = data(:, 1);
 Vgs = data(:, 3);
 
-% figure(4);
+figure(4);
 
 plot(Vout, Vgs, 'linewidth', 2);
 set(gca,'fontsize',20);
@@ -78,53 +78,116 @@ ylim([-1 6]);
 legend('R_{D} = 1 k\Omega', 'R_{D} = 4.44 k\Omega', 'R_{D} = 100 k\Omega');
 
 %% Transient Simulation Rd = 1k
+close all;
 
-data = csvread('NMOS_transient_1k.CSV');
-time = data(:, 1);
-Vout = data(:, 2);
+input = csvread('nmos-sim-trans-1k-input.csv');
+time = input(:, 1);
+vin = input(:, 2);
+output = csvread('nmos-sim-trans-1k-output.csv');
+time = output(:, 1);
+vout = output(:, 2);
 
 figure(5);
 
-plot(time * 1e3, Vout, 'linewidth', 2);
+plot(time * 1e3, vin, 'linewidth', 2);
+hold on;
+plot(time * 1e3, vout, 'linewidth', 2);
 set(gca,'fontsize',20);
-hold off;
 % title('NMOS Inverter Simulated Transient Response when R_{D} = 1 k\Omega');
 xlabel('Time, ms')
 ylabel('V_{O1}, Volts');
 grid on;
 ylim([-1 6]);
-legend('R_{D} = 1 k\Omega');
+legend('vI', 'vO');
+
+% hold off;
 
 %% Transient Simulation Rd = 4.4k
+close all;
 
-data = csvread('NMOS_transient_4k4.CSV');
-time = data(:, 1);      % CSV says otherwise????
-Vout = data(:, 2);      % Confused here
+input = csvread('nmos-sim-trans-4k4-input.csv');
+time = input(:, 1);
+vin = input(:, 2);
+output = csvread('nmos-sim-trans-4k4-output.csv');
+time = output(:, 1);
+vout = output(:, 2);
 
-figure(6);
+% figure(6);
 
-plot(time * 1e3, Vout, 'linewidth', 2);
+plot(time * 1e3, vin, 'linewidth', 2);
+hold on;
+plot(time * 1e3, vout, 'linewidth', 2);
 set(gca,'fontsize',20);
 % title('NMOS Inverter Simulated Transient Response when R_{D} = 4.44 k\Omega');
 xlabel('Time, ms')
 ylabel('V_{O1}, Volts');
 grid on;
 ylim([-1 6]);
-legend('R_{D} = 4.44 k\Omega');
+legend('vI', 'vO');
 
 %% Transient Simulation Rd = 100k
 
-data = csvread('NMOS_transient_100k.CSV');
-time = data(:, 1);      % CSV says otherwise????
-Vout = data(:, 2);      % Confused here
+input = csvread('nmos-sim-trans-100k-input.csv');
+time = input(:, 1);
+vin = input(:, 2);
+output = csvread('nmos-sim-trans-100k-output.csv');
+time = output(:, 1);
+vout = output(:, 2);
 
-figure(7);
+% figure(7);
 
-plot(time * 1e3, Vout, 'linewidth', 2);
+plot(time * 1e3, vin, 'linewidth', 2);
+hold on;
+plot(time * 1e3, vout, 'linewidth', 2);
 set(gca,'fontsize',20);
 % title('NMOS Inverter Simulated Transient Response when R_{D} = 100 k\Omega');
 xlabel('Time, ms')
 ylabel('V_{O1}, Volts');
 grid on;
 ylim([-1 6]);
-legend('R_{D} = 100 k\Omega');
+legend('vI', 'vO');
+
+%% Transient Simulation VDD = 10 V
+close all;
+
+input = csvread('nmos-sim-trans-10V-input.csv');
+time = input(:, 1);
+vin = input(:, 2);
+output = csvread('nmos-sim-trans-10V-output.csv');
+time = output(:, 1);
+vout = output(:, 2);
+
+figure(7);
+
+plot(time * 1e3, vin, 'linewidth', 2);
+hold on;
+plot(time * 1e3, vout, 'linewidth', 2);
+set(gca,'fontsize',20);
+% title('NMOS Inverter Simulated Transient Response when R_{D} = 100 k\Omega');
+xlabel('Time, ms')
+ylabel('V_{O1}, Volts');
+grid on;
+ylim([-1 11]);
+
+%% Transient Simulation VDD = 15 V
+close all;
+
+input = csvread('nmos-sim-trans-15V-input.csv');
+time = input(:, 1);
+vin = input(:, 2);
+output = csvread('nmos-sim-trans-15V-output.csv');
+time = output(:, 1);
+vout = output(:, 2);
+
+figure(7);
+
+plot(time * 1e3, vin, 'linewidth', 2);
+hold on;
+plot(time * 1e3, vout, 'linewidth', 2);
+set(gca,'fontsize',20);
+% title('NMOS Inverter Simulated Transient Response when R_{D} = 100 k\Omega');
+xlabel('Time, ms')
+ylabel('V_{O1}, Volts');
+grid on;
+ylim([-1 16]);
+legend('vI', 'vO');

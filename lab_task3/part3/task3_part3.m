@@ -15,3 +15,5 @@ ylabel('v_{out}, Volts');
 xlabel('Time, Microseconds');
 grid on;
 xlim([200 500]);
+
+text(252,3.75, 'f = 19.9 kHz', 'FontSize', 22);
