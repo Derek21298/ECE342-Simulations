@@ -20,6 +20,8 @@ equation = i_v_equation(1) * Vgs + i_v_equation(2);
 
 figure(1);
 
+% plot(Vgs_subset, Ids_subset * 1e3, 'linewidth', 4);
+% hold on;
 plot(Vgs, Ids * 1e3, 'linewidth', 2);
 hold on;
 plot(Vgs, equation * 1e3, 'linewidth', 2);
@@ -29,6 +31,7 @@ title('CD4007UBE NMOS Drain Current vs Gate Voltage');
 xlabel('V_{GS}, V');
 ylabel('I_{DS}, mA');
 xlim([0 5]);
+legend('I-V Characteristic', 'Linear Regression');
 
 vtn = interp1(equation * 1e3,Vgs,0)
 line([vtn vtn], [-0.1 0.25],'linestyle', '--', 'linewidth', 2);
