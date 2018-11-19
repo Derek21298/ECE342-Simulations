@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.0.0.3
 Key ID=Demo
-NLCnt=113
-TXCnt=3
+NLCnt=114
+TXCnt=2
 
 [shapedef]
 Name=Battery
@@ -233,7 +233,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=226
+Used=229
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -268,7 +268,7 @@ Name=NPN
 Definition=NPN
 Shape=NPN
 Mask=5633
-Used=7
+Used=16
 memo=NPN Transistor
 Label Offset=37,-17,-14,33
 PinCnt=3
@@ -317,7 +317,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=7937
-Used=46
+Used=48
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -325,7 +325,7 @@ Pin="Plus",6,0,-4,-5
 Pin="Minus",0,0,-10,-5
 
 [Circuit]
-Window Placement=0,3, -1,-1, -4,-23, 110,110,1476,699
+Window Placement=0,3, -1,-1, 0,0, 110,110,1476,699
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -357,7 +357,7 @@ Px=224,512
 Rot=4
 
 [Attr]
-ON=7,-39,PART
+ON=30,-19,PART
 V=M1
 Style=8192
 
@@ -390,16 +390,16 @@ V
 Pxs=248,440,248,456
 
 [Wire]
-Pxs=248,416,304,416
+Pxs=248,416,280,416
 
 [Wire]
-Pxs=304,376,304,416
+Pxs=280,376,280,416
 
 [Wire]
-Pxs=248,376,304,376
+Pxs=248,376,280,376
 
 [Wire]
-Pxs=248,328,248,376
+Pxs=248,336,248,376
 
 [Wire]
 Pxs=248,376,248,392
@@ -453,7 +453,7 @@ V=DC 5 AC 1 0
 Style=256
 
 [Wire]
-Pxs=248,328,360,328
+Pxs=248,336,360,336
 
 [Comp]
 Name=Ground
@@ -466,13 +466,13 @@ Px=256,552
 Rot=7
 
 [Wire]
-Pxs=200,416,224,416
+Pxs=216,416,224,416
 
 [Wire]
-Pxs=200,416,200,464
+Pxs=216,416,216,464
 
 [Wire]
-Pxs=200,512,224,512
+Pxs=216,512,224,512
 
 [Wire]
 Pxs=248,536,248,552
@@ -492,7 +492,7 @@ Px=424,512
 Rot=4
 
 [Attr]
-ON=7,-39,PART
+ON=31,-21,PART
 V=M5
 Style=8192
 
@@ -525,13 +525,13 @@ V
 Pxs=448,440,448,464
 
 [Wire]
-Pxs=448,416,496,416
+Pxs=448,416,480,416
 
 [Wire]
-Pxs=496,376,496,416
+Pxs=480,376,480,416
 
 [Wire]
-Pxs=448,376,496,376
+Pxs=448,376,480,376
 
 [Wire]
 Pxs=448,376,448,392
@@ -559,11 +559,11 @@ Pxs=448,552,456,552
 
 [Comp]
 Name=NMOS
-Px=624,520
+Px=592,520
 Rot=4
 
 [Attr]
-ON=7,-39,PART
+ON=34,-23,PART
 V=M7
 Style=8192
 
@@ -577,7 +577,7 @@ V
 
 [Comp]
 Name=PMOS
-Px=624,424
+Px=592,424
 
 [Attr]
 ON=29,0,PART
@@ -593,61 +593,58 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=648,448,648,472
+Pxs=616,448,616,472
 
 [Wire]
-Pxs=648,424,680,424
+Pxs=616,424,648,424
 
 [Wire]
-Pxs=680,384,680,424
+Pxs=648,384,648,424
 
 [Wire]
-Pxs=648,384,680,384
+Pxs=616,384,648,384
 
 [Wire]
-Pxs=648,384,648,400
+Pxs=616,384,616,400
 
 [Wire]
-Pxs=600,424,624,424
+Pxs=568,424,592,424
 
 [Wire]
-Pxs=600,424,600,464
+Pxs=568,424,568,464
 
 [Wire]
-Pxs=600,520,624,520
+Pxs=568,520,592,520
 
 [Wire]
-Pxs=648,544,648,560
+Pxs=616,520,640,520
 
 [Wire]
-Pxs=648,520,672,520
+Pxs=640,520,640,552
 
 [Wire]
-Pxs=672,520,672,560
-
-[Wire]
-Pxs=648,560,656,560
+Pxs=616,552,624,552
 
 [Wire]
 Pxs=360,400,360,416
 
 [Wire]
-Pxs=360,328,448,328
+Pxs=360,336,448,336
 
 [Wire]
-Pxs=448,328,648,328
+Pxs=448,336,616,336
 
 [Wire]
-Pxs=648,328,648,384
+Pxs=616,336,616,384
 
 [Wire]
-Pxs=448,464,544,464
+Pxs=448,464,520,464
 
 [Wire]
 Pxs=448,464,448,488
 
 [Wire]
-Pxs=600,464,600,520
+Pxs=568,464,568,520
 
 [Wire]
 Pxs=248,456,296,456
@@ -659,39 +656,39 @@ Pxs=248,456,248,488
 Pxs=400,456,400,512
 
 [Wire]
-Pxs=200,464,200,512
+Pxs=216,464,216,512
 
 [Wire]
-Pxs=648,472,696,472
+Pxs=616,472,664,472
 
 [Wire]
-Pxs=648,472,648,496
+Pxs=616,472,616,496
 
 [Wire]
-Pxs=696,312,696,472
+Pxs=664,320,664,472
 
 [Wire]
-Pxs=184,312,544,312
+Pxs=208,320,520,320
 
 [Wire]
-Pxs=184,312,184,464
+Pxs=208,320,208,464
 
 [Wire]
-Pxs=184,464,200,464
+Pxs=208,464,216,464
 
 [Comp]
 Name=Capacitor
-Px=544,384
+Px=520,392
 Rot=5
 
 [Attr]
-ON=12,-26,PART
+ON=-30,-31,PART
 V=C4
 Style=8192
 
 [Attr]
-ON=12,-40,CAPACITANCE
-V=230p
+ON=13,-32,CAPACITANCE
+V=270p
 Style=8192
 
 [Attr]
@@ -699,14 +696,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=544,384,544,464
+Pxs=520,392,520,464
 
 [Wire]
-Pxs=544,464,600,464
+Pxs=520,464,568,464
 
 [Comp]
 Name=Resistor
-Px=600,312
+Px=568,320
 
 [Attr]
 ON=4,-21,PART
@@ -723,22 +720,22 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=544,312,600,312
+Pxs=520,320,568,320
 
 [Wire]
-Pxs=648,312,696,312
+Pxs=616,320,664,320
 
 [Comp]
 Name=Resistor
 Px=312,600
 
 [Attr]
-ON=18,6,PART
+ON=17,-24,PART
 V=R1
 Style=8192
 
 [Attr]
-ON=18,20,RESISTANCE
+ON=15,8,RESISTANCE
 V=30k
 Style=8192
 
@@ -748,16 +745,16 @@ V
 
 [Comp]
 Name=Resistor
-Px=400,664
+Px=384,664
 Rot=3
 
 [Attr]
-ON=18,6,PART
+ON=-25,-30,PART
 V=R2
 Style=8192
 
 [Attr]
-ON=18,20,RESISTANCE
+ON=11,-30,RESISTANCE
 V=470k
 Style=8192
 
@@ -767,7 +764,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=592,776
+Px=568,776
 Rot=3
 
 [Attr]
@@ -785,19 +782,19 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=360,600,400,600
+Pxs=360,600,384,600
 
 [Wire]
-Pxs=400,600,400,616
+Pxs=384,600,384,616
 
 [Comp]
 Name=Ground
-Px=400,680
+Px=384,680
 Rot=7
 
 [Comp]
 Name=NPN
-Px=568,680
+Px=544,680
 
 [Attr]
 ON=37,-17,PART
@@ -813,27 +810,27 @@ ON=71,25,PACKAGE
 V=TO-92
 
 [Wire]
-Pxs=592,704,592,720
+Pxs=568,704,568,720
 
 [Wire]
-Pxs=592,592,680,592
+Pxs=568,592,656,592
 
 [Wire]
-Pxs=680,592,680,616
+Pxs=656,592,656,616
 
 [Comp]
 Name=Ground
-Px=592,776
+Px=568,776
 Rot=7
 
 [Comp]
 Name=Voltage Source
-Px=680,664
+Px=656,664
 Rot=3
 
 [Attr]
 ON=14,-32,PART
-V=VDD
+V=Vbatt
 Style=8192
 
 [Attr]
@@ -876,15 +873,15 @@ Style=256
 
 [Comp]
 Name=Ground
-Px=680,664
+Px=656,664
 Rot=7
 
 [Wire]
-Pxs=592,592,592,608
+Pxs=568,592,568,608
 
 [Comp]
 Name=Opamp
-Px=472,600
+Px=448,600
 
 [Attr]
 ON=44,29,PART
@@ -900,48 +897,48 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=400,600,472,600
+Pxs=384,600,448,600
 
 [Wire]
-Pxs=464,648,472,648
+Pxs=440,648,448,648
 
 [Wire]
-Pxs=464,648,464,720
+Pxs=440,648,440,720
 
 [Wire]
-Pxs=464,720,592,720
+Pxs=440,720,568,720
 
 [Wire]
-Pxs=592,720,592,728
+Pxs=568,720,568,728
 
 [Wire]
-Pxs=544,680,568,680
+Pxs=520,680,544,680
 
 [Wire]
-Pxs=400,664,400,680
+Pxs=384,664,384,680
 
 [Wire]
 Pxs=296,456,296,600
 
 [Wire]
-Pxs=448,328,448,376
+Pxs=448,336,448,376
 
 [Wire]
-Pxs=360,328,360,352
+Pxs=360,336,360,352
 
 [Wire]
-Pxs=544,312,544,336
+Pxs=520,320,520,344
 
 [Wire]
 Pxs=256,552,272,552
 
 [Comp]
 Name=Ground
-Px=656,560
+Px=624,552
 Rot=7
 
 [Wire]
-Pxs=656,560,672,560
+Pxs=624,552,640,552
 
 [Comp]
 Name=Ground
@@ -952,7 +949,7 @@ Rot=7
 Pxs=456,552,472,552
 
 [Wire]
-Pxs=544,624,544,680
+Pxs=520,624,520,680
 
 [Wire]
 Pxs=296,600,312,600
@@ -962,7 +959,7 @@ Pxs=296,456,400,456
 
 [Comp]
 Name=LA_W5KM-TYP
-Px=592,648
+Px=568,648
 Rot=3
 
 [Attr]
@@ -975,14 +972,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=592,648,592,656
+Pxs=568,648,568,656
 
 [Comp]
 Name=MAX15006A
-Px=856,496
+Px=792,480
 
 [Attr]
-ON=12,-25,PART
+ON=11,-25,PART
 V=LM7805
 Style=8192
 
@@ -992,16 +989,16 @@ V=SO-8
 
 [Comp]
 Name=Battery
-Px=784,520
+Px=720,504
 Rot=7
 
 [Attr]
-ON=-24,13,PART
-V=V6
+ON=-40,16,PART
+V=Vbatt
 Style=8192
 
 [Attr]
-ON=-24,27,VALUE
+ON=13,16,VALUE
 V=9V
 Style=8192
 
@@ -1010,36 +1007,35 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=784,512,784,520
+Pxs=720,496,720,504
 
 [Wire]
-Pxs=784,512,832,512
+Pxs=720,496,768,496
 
 [Comp]
 Name=Ground
-Px=784,568
+Px=720,552
 Rot=7
 
 [Comp]
 Name=Ground
-Px=888,552
+Px=824,536
 Rot=7
 
 [Wire]
-Pxs=944,512,960,512
+Pxs=880,496,896,496
+
+[Comp]
+Name=Ground
+Px=480,656
+Rot=7
+
+[Wire]
+Pxs=616,544,616,552
 
 [Grid Text]
-Text="VC1"
-Px=504,656
-Height=-12
-GridSnap=True
-JustifyH=Left
-JustifyV=Bottom
-CBorder=None
-
-[Grid Text]
-Text="VE1"
-Px=504,592
+Text="VDD"
+Px=480,592
 Height=-12
 GridSnap=True
 JustifyH=Left
@@ -1048,7 +1044,7 @@ CBorder=None
 
 [Grid Text]
 Text="VDD"
-Px=960,512
+Px=896,496
 Height=-12
 GridSnap=True
 JustifyH=Left
@@ -1217,9 +1213,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=76,280
+SB 3=0,280
 Scale 3=0.66666666666666663
-Px=533,692
+Px=773,567
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
