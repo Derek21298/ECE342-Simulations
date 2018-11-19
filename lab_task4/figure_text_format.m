@@ -5,8 +5,8 @@ function output_txt = myfunction(obj,event_obj)
 % output_txt   Data cursor text string (string or cell array of strings).
 
 pos = get(event_obj,'Position');
-output_txt = {['X: ',num2str(pos(1),8)],...
-    ['Y: ',num2str(pos(2),8)]};
+output_txt = {['X: ',num2str(pos(1),4)],...
+    ['Y: ',num2str(pos(2),4)]};
 
 % If there is a Z-coordinate in the position, display it as well
 if length(pos) > 2
@@ -15,5 +15,5 @@ end
 
 
 alldatacursors = findall(gcf,'type','hggroup')
-set(alldatacursors,'FontSize',20)
+set(alldatacursors,'FontSize',16)
 set(alldatacursors,'FontName','Times')
