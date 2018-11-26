@@ -221,7 +221,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=38
+Used=40
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -233,7 +233,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=229
+Used=232
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -317,7 +317,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=7937
-Used=48
+Used=49
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -325,7 +325,7 @@ Pin="Plus",6,0,-4,-5
 Pin="Minus",0,0,-10,-5
 
 [Circuit]
-Window Placement=0,3, -1,-1, 0,0, 110,110,1476,699
+Window Placement=0,3, -1,-1, -4,-23, 110,110,1476,699
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -559,7 +559,7 @@ Pxs=448,552,456,552
 
 [Comp]
 Name=NMOS
-Px=592,520
+Px=592,512
 Rot=4
 
 [Attr]
@@ -577,7 +577,7 @@ V
 
 [Comp]
 Name=PMOS
-Px=592,424
+Px=592,416
 
 [Attr]
 ON=29,0,PART
@@ -593,37 +593,37 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=616,448,616,472
+Pxs=616,440,616,464
 
 [Wire]
-Pxs=616,424,648,424
+Pxs=616,416,648,416
 
 [Wire]
-Pxs=648,384,648,424
+Pxs=648,376,648,416
 
 [Wire]
-Pxs=616,384,648,384
+Pxs=616,376,648,376
 
 [Wire]
-Pxs=616,384,616,400
+Pxs=616,376,616,392
 
 [Wire]
-Pxs=568,424,592,424
+Pxs=568,416,592,416
 
 [Wire]
-Pxs=568,424,568,464
+Pxs=568,416,568,464
 
 [Wire]
-Pxs=568,520,592,520
+Pxs=568,512,592,512
 
 [Wire]
-Pxs=616,520,640,520
+Pxs=616,512,640,512
 
 [Wire]
-Pxs=640,520,640,552
+Pxs=640,512,640,544
 
 [Wire]
-Pxs=616,552,624,552
+Pxs=616,544,624,544
 
 [Wire]
 Pxs=360,400,360,416
@@ -635,16 +635,13 @@ Pxs=360,336,448,336
 Pxs=448,336,616,336
 
 [Wire]
-Pxs=616,336,616,384
+Pxs=616,336,616,376
 
 [Wire]
 Pxs=448,464,520,464
 
 [Wire]
 Pxs=448,464,448,488
-
-[Wire]
-Pxs=568,464,568,520
 
 [Wire]
 Pxs=248,456,296,456
@@ -659,13 +656,13 @@ Pxs=400,456,400,512
 Pxs=216,464,216,512
 
 [Wire]
-Pxs=616,472,664,472
+Pxs=616,464,664,464
 
 [Wire]
-Pxs=616,472,616,496
+Pxs=616,464,616,488
 
 [Wire]
-Pxs=664,320,664,472
+Pxs=664,320,664,464
 
 [Wire]
 Pxs=208,320,520,320
@@ -678,7 +675,7 @@ Pxs=208,464,216,464
 
 [Comp]
 Name=Capacitor
-Px=520,392
+Px=520,424
 Rot=5
 
 [Attr]
@@ -696,7 +693,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=520,392,520,464
+Pxs=520,424,520,464
 
 [Wire]
 Pxs=520,464,568,464
@@ -927,18 +924,18 @@ Pxs=448,336,448,376
 Pxs=360,336,360,352
 
 [Wire]
-Pxs=520,320,520,344
+Pxs=520,320,520,376
 
 [Wire]
 Pxs=256,552,272,552
 
 [Comp]
 Name=Ground
-Px=624,552
+Px=624,544
 Rot=7
 
 [Wire]
-Pxs=624,552,640,552
+Pxs=624,544,640,544
 
 [Comp]
 Name=Ground
@@ -989,16 +986,16 @@ V=SO-8
 
 [Comp]
 Name=Battery
-Px=720,504
-Rot=7
+Px=720,552
+Rot=5
 
 [Attr]
-ON=-40,16,PART
+ON=-41,-33,PART
 V=Vbatt
 Style=8192
 
 [Attr]
-ON=13,16,VALUE
+ON=13,-31,VALUE
 V=9V
 Style=8192
 
@@ -1031,7 +1028,10 @@ Px=480,656
 Rot=7
 
 [Wire]
-Pxs=616,544,616,552
+Pxs=616,536,616,544
+
+[Wire]
+Pxs=568,464,568,512
 
 [Grid Text]
 Text="VDD"
@@ -1213,9 +1213,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=0,280
+SB 3=99,283
 Scale 3=0.66666666666666663
-Px=773,567
+Px=562,373
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000

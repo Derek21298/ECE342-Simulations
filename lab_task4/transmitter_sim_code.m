@@ -57,7 +57,7 @@ xlim([0, 250]);
 %% Plot led driver current w/ astable multivibrator 
 
 
-data = csvread('ledDriver_full_current.CSV');
+data = csvread('transmitter_sim_current.CSV');
 current = data(:, 2);
 time = data(:,1);
 
@@ -65,7 +65,7 @@ figure(4);
 
 plot(time * 1e6, current * 1e3, 'linewidth', 2);
 set(gca, 'fontsize', 20);
-title('Optical Link Transmitter LED Current Signal');
+% title('Optical Link Transmitter LED Current Signal');
 xlabel('Time, Microseconds');
 ylabel('LED Current, mA');
 grid on;

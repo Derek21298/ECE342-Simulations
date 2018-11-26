@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.0.0.3
 Key ID=Demo
-NLCnt=108
-TXCnt=4
+NLCnt=107
+TXCnt=3
 
 [shapedef]
 Name=Battery
@@ -171,71 +171,11 @@ Root="Plus.root",41,7,0
 Current=32,16,16,16
 
 [compdef]
-Name=Resistor
-Definition=Resistor
-Shape=Resistor
-Mask=6145
-Used=143
-memo=Resistor
-Label Offset=18,6,8,11
-PinCnt=2
-Pin="Plus",6,0,-10,-4
-Pin="Minus",0,0,-14,-4
-
-[compdef]
-Name=Ground
-Definition=Ground
-Shape=Ground
-Mask=1793
-Used=228
-memo=Ground
-Label Offset=0,0,0,0
-PinCnt=1
-Pin="PinA",0,0,-3,-7
-
-[compdef]
-Name=NPN
-Definition=NPN
-Shape=NPN
-Mask=5633
-Used=9
-memo=NPN Transistor
-Label Offset=37,-17,-14,33
-PinCnt=3
-Pin="Collector",3,-3,4,14
-Pin="Base",0,0,-18,-3
-Pin="Emitter",3,3,5,1
-
-[compdef]
-Name=Voltage Source
-Definition=VSpice
-Shape=SPICE_V
-Mask=4865
-Used=34
-memo=Voltage Source
-Label Offset=19,13,15,13
-PinCnt=2
-Pin="Plus",6,0,-5,-6
-Pin="Minus",0,0,-20,-6
-
-[compdef]
-Name=Diode
-Definition=Diode
-Shape=Diode
-Mask=5121
-Used=7
-memo=Diode
-Label Offset=17,10,12,12
-PinCnt=2
-Pin="Anode",6,0,-9,-8
-Pin="Cathode",0,0,-20,-8
-
-[compdef]
 Name=NMOS
 Definition=NMOS
 Shape=NMOS
 Mask=5376
-Used=9
+Used=6
 memo=NMOS
 Label Offset=29,1,7,25
 PinCnt=4
@@ -249,7 +189,6 @@ Name=PMOS
 Definition=PMOS
 Shape=PMOS
 Mask=4096
-Used=6
 memo=PMOS
 Label Offset=29,0,-18,26
 PinCnt=4
@@ -259,11 +198,22 @@ Pin="Source",3,3,7,4
 Pin="Body",3,0,7,0
 
 [compdef]
+Name=Ground
+Definition=Ground
+Shape=Ground
+Mask=1793
+Used=232
+memo=Ground
+Label Offset=0,0,0,0
+PinCnt=1
+Pin="PinA",0,0,-3,-7
+
+[compdef]
 Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7425
-Used=35
+Used=34
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -271,23 +221,48 @@ Pin="Plus",6,0,-3,-5
 Pin="Minus",0,0,-14,-5
 
 [compdef]
-Name=Battery
-Definition=Battery
-Shape=Battery
-Mask=7937
-Used=44
-memo=Battery
-Label Offset=19,7,10,13
+Name=Resistor
+Definition=Resistor
+Shape=Resistor
+Mask=6145
+Used=143
+memo=Resistor
+Label Offset=18,6,8,11
 PinCnt=2
-Pin="Plus",6,0,-4,-5
-Pin="Minus",0,0,-10,-5
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
+
+[compdef]
+Name=NPN
+Definition=NPN
+Shape=NPN
+Mask=5633
+Used=16
+memo=NPN Transistor
+Label Offset=37,-17,-14,33
+PinCnt=3
+Pin="Collector",3,-3,4,14
+Pin="Base",0,0,-18,-3
+Pin="Emitter",3,3,5,1
+
+[compdef]
+Name=Voltage Source
+Definition=VSpice
+Shape=SPICE_V
+Mask=4865
+Used=40
+memo=Voltage Source
+Label Offset=19,13,15,13
+PinCnt=2
+Pin="Plus",6,0,-5,-6
+Pin="Minus",0,0,-20,-6
 
 [compdef]
 Name=Opamp
 Definition=Opamp
 Shape=Opamp5
 Mask=5121
-Used=3
+Used=4
 memo=Opamp
 Label Offset=44,29,-14,39
 PinCnt=5
@@ -297,8 +272,32 @@ Pin="VEE",4,7,3,-5
 Pin="Output",9,3,-13,-4
 Pin="VCC",4,-1,5,14
 
+[compdef]
+Name=Battery
+Definition=Battery
+Shape=Battery
+Mask=7937
+Used=49
+memo=Battery
+Label Offset=19,7,10,13
+PinCnt=2
+Pin="Plus",6,0,-4,-5
+Pin="Minus",0,0,-10,-5
+
+[compdef]
+Name=Diode
+Definition=Diode
+Shape=Diode
+Mask=5121
+Used=11
+memo=Diode
+Label Offset=17,10,12,12
+PinCnt=2
+Pin="Anode",6,0,-9,-8
+Pin="Cathode",0,0,-20,-8
+
 [Circuit]
-Window Placement=0,3, -1,-1, -4,-23, 132,132,1484,715
+Window Placement=0,3, -1,-1, -4,-23, 110,110,1476,699
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -310,11 +309,11 @@ PowerFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=0,3, -1,-1, -4,-23, 132,132,1484,715
+Window Placement in Transient Analysis=0,3, -1,-1, -4,-23, 286,286,1911,873
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
-Show Nodes=True
+Show Nodes=False
 Show Voltages=False
 Show Current=False
 Show Power=False
@@ -326,16 +325,325 @@ Show Attribute Text=True
 Show Grid Text=True
 
 [Comp]
-Name=Resistor
-Px=928,184
+Name=NMOS
+Px=224,512
+Rot=4
 
 [Attr]
-ON=18,6,PART
+ON=30,-19,PART
+V=M1
+Style=8192
+
+[Attr]
+ON=7,-53,MODEL
+V=CD4007UBE
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=PMOS
+Px=224,416
+
+[Attr]
+ON=29,0,PART
+V=M4
+Style=8192
+
+[Attr]
+ON=29,14,MODEL
+V=CD4007UBE
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=248,440,248,456
+
+[Wire]
+Pxs=248,416,280,416
+
+[Wire]
+Pxs=280,376,280,416
+
+[Wire]
+Pxs=248,376,280,376
+
+[Wire]
+Pxs=248,336,248,376
+
+[Wire]
+Pxs=248,376,248,392
+
+[Wire]
+Pxs=248,336,312,336
+
+[Comp]
+Name=Ground
+Px=256,544
+Rot=7
+
+[Wire]
+Pxs=216,416,224,416
+
+[Wire]
+Pxs=216,416,216,464
+
+[Wire]
+Pxs=216,512,224,512
+
+[Wire]
+Pxs=248,512,272,512
+
+[Wire]
+Pxs=272,512,272,544
+
+[Comp]
+Name=NMOS
+Px=376,512
+Rot=4
+
+[Attr]
+ON=31,-21,PART
+V=M5
+Style=8192
+
+[Attr]
+ON=7,-53,MODEL
+V=CD4007UBE
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=PMOS
+Px=376,416
+
+[Attr]
+ON=29,0,PART
+V=M6
+Style=8192
+
+[Attr]
+ON=29,14,MODEL
+V=CD4007UBE
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=400,440,400,464
+
+[Wire]
+Pxs=400,416,432,416
+
+[Wire]
+Pxs=432,376,432,416
+
+[Wire]
+Pxs=400,376,432,376
+
+[Wire]
+Pxs=400,376,400,392
+
+[Wire]
+Pxs=352,416,376,416
+
+[Wire]
+Pxs=352,416,352,456
+
+[Wire]
+Pxs=352,512,376,512
+
+[Wire]
+Pxs=400,536,400,544
+
+[Wire]
+Pxs=400,512,424,512
+
+[Wire]
+Pxs=424,512,424,544
+
+[Wire]
+Pxs=400,544,408,544
+
+[Comp]
+Name=NMOS
+Px=544,512
+Rot=4
+
+[Attr]
+ON=34,-23,PART
+V=M7
+Style=8192
+
+[Attr]
+ON=7,-53,MODEL
+V=CD4007UBE
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=PMOS
+Px=544,416
+
+[Attr]
+ON=29,0,PART
+V=M8
+Style=8192
+
+[Attr]
+ON=29,14,MODEL
+V=CD4007UBE
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=568,440,568,464
+
+[Wire]
+Pxs=568,416,600,416
+
+[Wire]
+Pxs=600,376,600,416
+
+[Wire]
+Pxs=568,376,600,376
+
+[Wire]
+Pxs=568,376,568,392
+
+[Wire]
+Pxs=520,416,544,416
+
+[Wire]
+Pxs=520,416,520,464
+
+[Wire]
+Pxs=520,512,544,512
+
+[Wire]
+Pxs=568,512,592,512
+
+[Wire]
+Pxs=592,512,592,544
+
+[Wire]
+Pxs=568,544,576,544
+
+[Wire]
+Pxs=312,336,400,336
+
+[Wire]
+Pxs=400,336,568,336
+
+[Wire]
+Pxs=568,336,568,376
+
+[Wire]
+Pxs=400,464,472,464
+
+[Wire]
+Pxs=400,464,400,488
+
+[Wire]
+Pxs=248,456,296,456
+
+[Wire]
+Pxs=248,456,248,488
+
+[Wire]
+Pxs=352,456,352,512
+
+[Wire]
+Pxs=216,464,216,512
+
+[Wire]
+Pxs=568,464,616,464
+
+[Wire]
+Pxs=568,464,568,488
+
+[Wire]
+Pxs=616,312,616,464
+
+[Wire]
+Pxs=200,312,472,312
+
+[Wire]
+Pxs=200,312,200,464
+
+[Wire]
+Pxs=200,464,216,464
+
+[Comp]
+Name=Capacitor
+Px=472,416
+Rot=5
+
+[Attr]
+ON=-30,-31,PART
+V=C4
+Style=8192
+
+[Attr]
+ON=13,-32,CAPACITANCE
+V=230p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=472,416,472,464
+
+[Wire]
+Pxs=472,464,520,464
+
+[Comp]
+Name=Resistor
+Px=520,312
+
+[Attr]
+ON=4,-21,PART
+V=R4
+Style=8192
+
+[Attr]
+ON=29,-21,RESISTANCE
+V=100k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=472,312,520,312
+
+[Wire]
+Pxs=568,312,616,312
+
+[Comp]
+Name=Resistor
+Px=304,584
+
+[Attr]
+ON=17,-24,PART
 V=R1
 Style=8192
 
 [Attr]
-ON=18,20,RESISTANCE
+ON=15,8,RESISTANCE
 V=30k
 Style=8192
 
@@ -345,16 +653,16 @@ V
 
 [Comp]
 Name=Resistor
-Px=1056,264
+Px=376,648
 Rot=3
 
 [Attr]
-ON=18,6,PART
+ON=-25,-30,PART
 V=R2
 Style=8192
 
 [Attr]
-ON=18,20,RESISTANCE
+ON=11,-30,RESISTANCE
 V=470k
 Style=8192
 
@@ -364,16 +672,16 @@ V
 
 [Comp]
 Name=Resistor
-Px=1320,344
+Px=560,760
 Rot=3
 
 [Attr]
-ON=18,6,PART
+ON=-24,-30,PART
 V=R3
 Style=8192
 
 [Attr]
-ON=18,20,RESISTANCE
+ON=10,-33,RESISTANCE
 V=100
 Style=8192
 
@@ -382,23 +690,23 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=976,184,1056,184
+Pxs=352,584,376,584
 
 [Wire]
-Pxs=1056,184,1056,216
+Pxs=376,584,376,600
 
 [Comp]
 Name=Ground
-Px=1056,264
+Px=376,664
 Rot=7
 
 [Comp]
 Name=NPN
-Px=1296,208
+Px=536,664
 
 [Attr]
-ON=37,-17,PART
-V=Q1
+ON=31,-9,PART
+V=2N3904
 Style=8192
 
 [Attr]
@@ -410,30 +718,27 @@ ON=71,25,PACKAGE
 V=TO-92
 
 [Wire]
-Pxs=1320,232,1320,272
+Pxs=560,688,560,704
 
 [Wire]
-Pxs=1320,104,1432,104
+Pxs=560,584,640,584
 
 [Wire]
-Pxs=1432,104,1432,144
-
-[Wire]
-Pxs=800,184,928,184
+Pxs=640,584,640,600
 
 [Comp]
 Name=Ground
-Px=1320,376
+Px=560,760
 Rot=7
 
 [Comp]
 Name=Voltage Source
-Px=1432,192
+Px=640,648
 Rot=3
 
 [Attr]
-ON=-29,-27,PART
-V=V3
+ON=14,-32,PART
+V=9V
 Style=8192
 
 [Attr]
@@ -471,500 +776,24 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_None
-V=DC 9 AC 1 0 
+V=DC 9 AC 1 0
 Style=256
 
 [Comp]
 Name=Ground
-Px=1432,192
-Rot=7
-
-[Comp]
-Name=Diode
-Px=1320,168
-Rot=5
-
-[Attr]
-ON=17,-24,PART
-V=D1
-Style=8192
-
-[Attr]
-ON=17,-38,MODEL
-V=LEDSTANDIN
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=1320,104,1320,120
-
-[Wire]
-Pxs=1320,168,1320,184
-
-[Comp]
-Name=NMOS
-Px=160,352
-Rot=4
-
-[Attr]
-ON=7,-39,PART
-V=M1
-Style=8192
-
-[Attr]
-ON=7,-53,MODEL
-V=CD4007UBE
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=PMOS
-Px=160,256
-
-[Attr]
-ON=29,0,PART
-V=M4
-Style=8192
-
-[Attr]
-ON=29,14,MODEL
-V=CD4007UBE
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=184,280,184,296
-
-[Wire]
-Pxs=184,256,240,256
-
-[Wire]
-Pxs=240,216,240,256
-
-[Wire]
-Pxs=184,216,240,216
-
-[Wire]
-Pxs=184,112,184,216
-
-[Wire]
-Pxs=184,216,184,232
-
-[Comp]
-Name=Voltage Source
-Px=328,184
-Rot=3
-
-[Attr]
-ON=-29,-27,PART
-V=V5
-Style=8192
-
-[Attr]
-ON=-264,-41,VALUE
-V=DC 5 AC 1 0
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Attr]
-ON=0,0,SMOOTHING
-V=N
-Style=256
-
-[Attr]
-ON=0,0,Saved_PulseS
-V=N
-Style=256
-
-[Attr]
-ON=0,0,FRACTION
-V=.2
-Style=256
-
-[Attr]
-ON=0,0,Saved_PulseF
-V=.2
-Style=256
-
-[Attr]
-ON=0,0,Saved_Pulse
-V=DC 0 AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
-Style=256
-
-[Attr]
-ON=0,11,Saved_None
-V=DC 5 AC 1 0
-Style=256
-
-[Wire]
-Pxs=328,112,328,136
-
-[Wire]
-Pxs=184,112,328,112
-
-[Comp]
-Name=Ground
-Px=328,192
-Rot=7
-
-[Comp]
-Name=Ground
-Px=184,416
+Px=640,648
 Rot=7
 
 [Wire]
-Pxs=136,256,160,256
-
-[Wire]
-Pxs=136,256,136,304
-
-[Wire]
-Pxs=136,352,160,352
-
-[Wire]
-Pxs=184,376,184,392
-
-[Wire]
-Pxs=184,352,208,352
-
-[Wire]
-Pxs=208,352,208,392
-
-[Wire]
-Pxs=184,392,208,392
-
-[Wire]
-Pxs=184,392,184,416
-
-[Comp]
-Name=NMOS
-Px=440,352
-Rot=4
-
-[Attr]
-ON=7,-39,PART
-V=M5
-Style=8192
-
-[Attr]
-ON=7,-53,MODEL
-V=CD4007UBE
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=PMOS
-Px=440,256
-
-[Attr]
-ON=29,0,PART
-V=M6
-Style=8192
-
-[Attr]
-ON=29,14,MODEL
-V=CD4007UBE
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=464,280,464,304
-
-[Wire]
-Pxs=464,256,512,256
-
-[Wire]
-Pxs=512,216,512,256
-
-[Wire]
-Pxs=464,216,512,216
-
-[Wire]
-Pxs=464,216,464,232
-
-[Comp]
-Name=Ground
-Px=464,416
-Rot=7
-
-[Wire]
-Pxs=416,256,440,256
-
-[Wire]
-Pxs=416,256,416,296
-
-[Wire]
-Pxs=416,352,440,352
-
-[Wire]
-Pxs=464,376,464,392
-
-[Wire]
-Pxs=464,352,488,352
-
-[Wire]
-Pxs=488,352,488,392
-
-[Wire]
-Pxs=464,392,488,392
-
-[Wire]
-Pxs=464,392,464,416
-
-[Comp]
-Name=NMOS
-Px=640,360
-Rot=4
-
-[Attr]
-ON=7,-39,PART
-V=M7
-Style=8192
-
-[Attr]
-ON=7,-53,MODEL
-V=CD4007UBE
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=PMOS
-Px=640,264
-
-[Attr]
-ON=29,0,PART
-V=M8
-Style=8192
-
-[Attr]
-ON=29,14,MODEL
-V=CD4007UBE
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=664,288,664,312
-
-[Wire]
-Pxs=664,264,696,264
-
-[Wire]
-Pxs=696,224,696,264
-
-[Wire]
-Pxs=664,224,696,224
-
-[Wire]
-Pxs=664,224,664,240
-
-[Comp]
-Name=Ground
-Px=664,424
-Rot=7
-
-[Wire]
-Pxs=616,264,640,264
-
-[Wire]
-Pxs=616,264,616,304
-
-[Wire]
-Pxs=616,360,640,360
-
-[Wire]
-Pxs=664,384,664,400
-
-[Wire]
-Pxs=664,360,688,360
-
-[Wire]
-Pxs=688,360,688,400
-
-[Wire]
-Pxs=664,400,688,400
-
-[Wire]
-Pxs=664,400,664,424
-
-[Wire]
-Pxs=328,184,328,192
-
-[Wire]
-Pxs=328,112,464,112
-
-[Wire]
-Pxs=464,112,464,216
-
-[Wire]
-Pxs=464,112,664,112
-
-[Wire]
-Pxs=664,112,664,224
-
-[Wire]
-Pxs=464,304,560,304
-
-[Wire]
-Pxs=464,304,464,328
-
-[Wire]
-Pxs=616,304,616,360
-
-[Wire]
-Pxs=184,296,416,296
-
-[Wire]
-Pxs=184,296,184,328
-
-[Wire]
-Pxs=416,296,416,352
-
-[Wire]
-Pxs=136,304,136,352
-
-[Wire]
-Pxs=664,312,800,312
-
-[Wire]
-Pxs=664,312,664,336
-
-[Wire]
-Pxs=800,72,800,184
-
-[Wire]
-Pxs=80,72,560,72
-
-[Wire]
-Pxs=80,72,80,304
-
-[Wire]
-Pxs=80,304,136,304
-
-[Comp]
-Name=Capacitor
-Px=560,224
-Rot=5
-
-[Attr]
-ON=12,-26,PART
-V=C4
-Style=8192
-
-[Attr]
-ON=12,-40,CAPACITANCE
-V=230p
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=560,72,560,176
-
-[Wire]
-Pxs=560,224,560,304
-
-[Wire]
-Pxs=560,304,616,304
-
-[Comp]
-Name=Resistor
-Px=688,72
-
-[Attr]
-ON=18,6,PART
-V=R4
-Style=8192
-
-[Attr]
-ON=18,20,RESISTANCE
-V=100k
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=560,72,688,72
-
-[Wire]
-Pxs=736,72,800,72
-
-[Wire]
-Pxs=800,184,800,312
-
-[Wire]
-Pxs=1320,344,1320,376
-
-[Comp]
-Name=Battery
-Px=48,80
-Rot=3
-Page=3
-
-[Attr]
-ON=-17,-27,VALUE
-V=0
-Style=8192
-
-[Attr]
-ON=-24,-41,PART
-V=V6
-Style=8192
-
-[Comp]
-Name=Ground
-Px=48,80
-Rot=7
-Page=3
-
-[Comp]
-Name=Battery
-Px=112,80
-Rot=3
-Page=3
-
-[Attr]
-ON=-17,-27,VALUE
-V=5
-Style=8192
-
-[Attr]
-ON=-24,-41,PART
-V=V7
-Style=8192
-
-[Comp]
-Name=Ground
-Px=112,80
-Rot=7
-Page=3
+Pxs=560,584,560,592
 
 [Comp]
 Name=Opamp
-Px=1160,184
+Px=440,584
 
 [Attr]
-ON=44,29,PART
-V=X1
+ON=44,2,PART
+V=MCP6001
 Style=8192
 
 [Attr]
@@ -976,52 +805,157 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1056,184,1160,184
+Pxs=376,584,440,584
 
 [Wire]
-Pxs=1112,232,1160,232
+Pxs=432,632,440,632
 
 [Wire]
-Pxs=1112,232,1112,272
+Pxs=432,632,432,704
 
 [Wire]
-Pxs=1112,272,1320,272
+Pxs=432,704,560,704
 
 [Wire]
-Pxs=1320,272,1320,296
+Pxs=560,704,560,712
 
 [Wire]
-Pxs=1232,208,1296,208
+Pxs=512,664,536,664
+
+[Wire]
+Pxs=376,648,376,664
+
+[Wire]
+Pxs=296,456,296,584
+
+[Wire]
+Pxs=400,336,400,376
+
+[Wire]
+Pxs=472,312,472,368
+
+[Comp]
+Name=Ground
+Px=576,544
+Rot=7
+
+[Wire]
+Pxs=576,544,592,544
+
+[Comp]
+Name=Ground
+Px=408,544
+Rot=7
+
+[Wire]
+Pxs=408,544,424,544
+
+[Wire]
+Pxs=512,608,512,664
+
+[Wire]
+Pxs=296,584,304,584
+
+[Wire]
+Pxs=560,632,560,640
+
+[Comp]
+Name=Ground
+Px=472,640
+Rot=7
+
+[Wire]
+Pxs=568,536,568,544
+
+[Comp]
+Name=Battery
+Px=704,520
+Rot=5
+
+[Attr]
+ON=-28,-30,PART
+V=V1
+Style=8192
+
+[Attr]
+ON=13,-30,VALUE
+V=5V
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=704,528
+Rot=7
+
+[Wire]
+Pxs=704,456,704,472
+
+[Comp]
+Name=Diode
+Px=560,640
+Rot=5
+
+[Attr]
+ON=15,-30,PART
+V=IR LED
+Style=8192
+
+[Attr]
+ON=17,-38,MODEL
+V=LEDSTANDIN
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=256,544,272,544
+
+[Wire]
+Pxs=248,544,256,544
+
+[Wire]
+Pxs=248,536,248,544
+
+[Wire]
+Pxs=296,456,352,456
+
+[Wire]
+Pxs=520,464,520,512
+
+[Wire]
+Pxs=704,520,704,528
 
 [Grid Text]
-Text="VC1"
-Px=48,32
+Text="VDD"
+Px=472,576
+Height=-12
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
-Page=3
 CBorder=None
 
 [Grid Text]
-Text="VE1"
-Px=112,32
-GridSnap=True
-JustifyH=Left
-JustifyV=Bottom
-Page=3
-CBorder=None
-
-[Grid Text]
-Text="VC1"
-Px=1192,240
+Text="VDD"
+Px=704,456
+Height=-14
+Color=#000000
+Font=Arial
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
 [Grid Text]
-Text="VE1"
-Px=1192,176
+Text="VDD"
+Px=312,336
+Height=-14
+Color=#000000
+Font=Arial
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -1035,7 +969,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=0.66666666666666663
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -1167,13 +1101,13 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="ledDriver_full"
+Name="transmitter_sim"
 Type=Main
 Enable=True
 CurrentPage 0=0
 CurrentPage 1=0
 CurrentPage 2=0
-CurrentPage 3=0
+CurrentPage 3=2
 TabSize 0=400
 TabSize 1=400
 TabSize 2=400
@@ -1189,13 +1123,14 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-Scale 3=1
-Px=1179,222
+SB 3=114,259
+Scale 3=0.66666666666666663
+Px=331,415
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text Color=Height=-2,FStyle=0,Color=#0000FF,Name=Verdana
 Grid Text RTF=False
 Grid Text Angle=0
 Grid Text GridSnap=True
@@ -1208,8 +1143,8 @@ Grid OutlineColor=None
 Component Color=#0000FF
 Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
 Wire Color=#008000
-Bus Color=#008000
-Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
+Bus Color=#009F00
+Pin Connection=Height=-10,FStyle=0,Color=#000000,Name=Arial
 Pin Marker Color=#008000
 Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
 Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
@@ -1265,59 +1200,6 @@ Search Color=#FFFF00
 [Page]
 Index=3
 Section=0
-Print=True
-Enable=True
-Name=Power Supplies
-PrinterScale=1
-Scale 0=1
-Scale 1=1
-Scale 2=1
-Scale 3=1
-Px=96,58
-WinBackGround Color=#FFFFFF
-Select Color=#FF0000
-Anchor Color=#000000
-Select Box Color=#000080
-Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
-Grid Text RTF=False
-Grid Text Angle=0
-Grid Text GridSnap=True
-Grid Text PinIt=False
-Grid Text JustifyH=Left
-Grid Text JustifyV=Bottom
-Grid GradientColor2=None
-Grid OutlineThickness=1
-Grid OutlineColor=None
-Component Color=#0000FF
-Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
-Wire Color=#008000
-Bus Color=#008000
-Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
-Pin Marker Color=#008000
-Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
-Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
-Dynamic AC Voltage Color=#E4E4E4
-Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
-Title Block Background=#C0C0C0
-Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
-Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
-Digital Path Color=#FF0000
-Title Block Border=#000000
-Disabled	Color=#C0C0C0
-Search Color=#FFFF00
-Grid Color=#000000
-Graph Paper=#E4E4E4
-Digital 0 Color=#000000
-Digital R Color=#FFFF00
-Digital F Color=#FFFF00
-Digital 1 Color=#FF0000
-Digital X Color=#C0C0C0
-Digital Z Color=#808080
-Block Select Color=#51F998
-
-[Page]
-Index=4
-Section=0
 Type=Info
 Print=False
 Enable=True
@@ -1353,11 +1235,8 @@ Text=* .Model BJT1 NPN (RE=12 LOT/1/GAUSS=30% DEV/2/UNIFORM=2%)
 Text=*
 Text=* A .cir file is typically found in the data directory
 Text=*
+Text=
 Text=.MODEL LEDStandIn D (IS=4e-24 RS=2 TT=11.N)
-Text=*** From file C:\MC12demo\library\UMAINE2015SEPTEMBER.LIB
-Text=.MODEL MCP6001 OPA (LEVEL=3 A=400K C=10P IBIAS=1P IOFF=1P IOSC=30M PD=5M PM=90
-Text=+ ROUTAC=50 ROUTDC=75 SRN=6MEG SRP=6MEG TYPE=3 VCC=5 VEE=0 VNS=0.7 VOFF=0.5M
-Text=+ VPS=4.4)
 
 [InfoPage]
 InfoPage=True
@@ -1376,13 +1255,13 @@ SimulationLog=True
 
 [Transient]
 WinID=1
-Window Placement=0,3, -1,-1, -4,-23, 132,132,1484,715
+Window Placement=0,3, -1,-1, -4,-23, 286,286,1911,873
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Title
+Title=transmitter_sim.cir
 AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
@@ -1477,7 +1356,7 @@ Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Num Out Format=3
 Num Out HideNonSelected=False
 Num Out UseActualDataPoints=False
-UserFileName="Z:\home\omega\Documents\ece342\task4\ledDriver_full_current.CSV"
+UserFileName="Z:\home\cameron\ece342\lab_task4\transmitter_sim_current.CSV"
 Wav SampleRate=11025
 Wav Nbits=16
 AutoSaveWave=False
@@ -1611,7 +1490,7 @@ Seed=0
 Analysis=Transient
 TMax=250u
 TStart=0
-TStep=10n
+TStep=0.01u
 NPts=51
 Temp=27
 RetraceRuns=1
@@ -1626,13 +1505,13 @@ Analysis=Transient
 Plt=1
 AliasID=1
 XExp=T
-YExp=v(3)
+YExp=v(7)/100
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-WSP Title="v(3) vs T"
-WSP Checked=False
-WSP NOP=25100
+WSP Title="v(7)/100 vs T"
+WSP Checked=True
+WSP NOP=20094
 WSP Save Actual Data=True
 WSP Wav Order=0
 Enable=Enable
@@ -1652,19 +1531,14 @@ NOFmtY=3E
 
 [WaveForm]
 Analysis=Transient
-Plt=2
+Plt=1
 AliasID=2
 XExp=T
-YExp=i(r3)
+YExp=v(VDD)
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-WSP Title="i(r3) vs T"
-WSP Checked=True
-WSP NOP=25100
-WSP Save Actual Data=True
-WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 Line Color=#FF0000
 Text Color=#FF0000
 Rainbow=False
@@ -1685,7 +1559,7 @@ AliasID=-1
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-Enable=Enable
+Enable=DontRun
 Line Color=#008000
 Text Color=#008000
 Rainbow=False
