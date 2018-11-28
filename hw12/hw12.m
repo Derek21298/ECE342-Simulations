@@ -1,6 +1,6 @@
 %% ECE 342 - Cameron Sullivan - HW12
 
-%% #3 Part A: NMOS amplifier gain vs input voltage
+%% #2 Part A: NMOS amplifier gain vs input voltage
 close all;
 
 input = csvread('nmos-exper-vtc-INPUT-test.csv');
@@ -10,11 +10,12 @@ inputVoltage = input(:,2);
 outputVoltage = output(:,2);
 
 gain = outputVoltage ./ inputVoltage;
-plot(inputVoltage, gain, 'linewidth', 2);
+plot(inputVoltage, gain, 'linewidth', 2.2);
 set(gca, 'fontsize', 20);
 title('NMOS Amplifier Gain vs Input Voltage');
 ylabel('A_{v}, V/V');
 xlabel('V_{GS}, V');
+xlim([0.01243, 4.5]);
 % figure(2);
 % plot(inputVoltage, outputVoltage, 'linewidth', 2);
 grid on;
@@ -27,7 +28,7 @@ vin = data(:,1);
 vout = data(:,3);
 
 figure(1);
-plot(vin, vout, 'linewidth', 2);
+plot(vin, vout, 'linewidth', 2.2);
 grid on;
 set(gca, 'fontsize', 20);
 title('BJT Amplifier VTC');
@@ -42,7 +43,7 @@ frequency = data(:,1);
 gain = data(:,4);
 
 figure(1);
-semilogx(frequency, abs(gain), 'linewidth', 2);
+semilogx(frequency, abs(gain), 'linewidth', 2.2);
 grid on;
 set(gca, 'fontsize', 20);
 title('BJT Amplifier Gain Response');
