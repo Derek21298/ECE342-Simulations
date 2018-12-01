@@ -159,7 +159,7 @@ PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
 Window Placement in Transient Analysis=0,3, -1,-1, -4,-23, 110,110,1735,697
-Window Placement in AC Analysis=0,3, -1,-1, -4,-23, 132,132,1757,719
+Window Placement in AC Analysis=2,3, 21,819, -4,-23, 132,132,1757,719
 Window Placement in DC Analysis=0,3, -1,-1, -4,-23, 110,110,1735,697
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
@@ -889,7 +889,7 @@ Name="MAIN"
 
 [AC]
 WinID=2
-Window Placement=1,2, 21,819, -4,-23, 132,132,1757,719
+Window Placement=2,3, 21,819, -4,-23, 132,132,1757,719
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -1450,7 +1450,7 @@ Analysis=AC
 Plt=1
 AliasID=1
 XExp=F
-YExp=v(vout)/v(vin)
+YExp=dB(v(vout)/v(vin))
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARY

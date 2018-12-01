@@ -68,5 +68,5 @@ semilogx(frequency, 20*log10(abs(gain)), 'linewidth', 2.2);
 grid on;
 set(gca, 'fontsize', 20);
 title('BJT Amplifier Gain Response');
-ylabel('A_{V}, V/V');
+ylabel('A_{V}, dB');
 xlabel('Frequency, Hz');
