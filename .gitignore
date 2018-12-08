@@ -1,4 +1,5 @@
 *
+!.gitignore
 !matlab-template/
 !hw*/
 !lab*/
@@ -13,3 +14,4 @@
 !*.csv
 !*.xls
 !*.bmp
+!*.dwf3work
