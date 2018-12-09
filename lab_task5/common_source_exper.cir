@@ -208,7 +208,7 @@ V=RD
 Style=8192
 
 [Attr]
-ON=17,-33,RESISTANCE
+ON=14,-31,RESISTANCE
 V=10k
 Style=8192
 
@@ -302,7 +302,7 @@ Style=8192
 
 [Attr]
 ON=14,-29,RESISTANCE
-V=30.7k
+V=30k
 Style=8192
 
 [Attr]
@@ -470,7 +470,7 @@ Style=8192
 
 [Attr]
 ON=-36,9,CAPACITANCE
-V=470n
+V=1u
 Style=8192
 
 [Attr]
@@ -495,7 +495,7 @@ Style=8192
 
 [Attr]
 ON=-36,14,CAPACITANCE
-V=470n
+V=1u
 Style=8192
 
 [Attr]
@@ -520,7 +520,7 @@ Style=8192
 
 [Attr]
 ON=-35,12,CAPACITANCE
-V=3.3u
+V=4.7u
 Style=8192
 
 [Attr]
@@ -871,7 +871,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="common_source_sim"
+Name="common_source_exper"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -895,7 +895,7 @@ Scale 1=1
 Scale 2=1
 SB 3=91,228
 Scale 3=0.5
-Px=824,425
+Px=626,286
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
