@@ -15,7 +15,7 @@ CollectorI = data(:,3);
 % slope = 1 / VT
 
 figure(1);
-% plot(BaseV, log(CollectorI * 1e3), 'linewidth', 2);
+plot(BaseV, log(CollectorI * 1e3), 'linewidth', 2);
 hold on;
 % plot(BaseV, CollectorI * 1e3, 'linewidth', 2);
 grid on;
