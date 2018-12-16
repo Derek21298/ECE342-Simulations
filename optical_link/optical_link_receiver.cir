@@ -1,0 +1,1294 @@
+[Main]
+FileType=CIR
+Version=12.00
+Program=Micro-Cap
+Component Version=10.00
+Shape Version=11.00
+Screen=1920,1080
+MCAPVersion=12.0.0.3
+Key ID=Demo
+NLCnt=89
+TXCnt=10
+
+[shapedef]
+Name=Battery
+Line=0,0,22,0
+Line=22,-3,22,3
+Line=26,-7,26,7
+Line=26,0,48,0
+Current=32,8,16,8
+
+[shapedef]
+Name=Capacitor
+Line=0,0,22,0
+Line=22,-8,22,8
+Line=26,-8,26,8
+Line=26,0,48,0
+Current=32,12,16,12
+
+[shapedef]
+Name=Diode.root
+Line=0,0,20,0
+Line=28,0,48,0
+Rectangle=18,-8,20,8
+PolyClosed=3
+PolyLine=20,0
+PolyLine=28,-8
+PolyLine=28,8
+Current=32,16,16,16
+
+[shapedef]
+Name=Ground
+Line=0,0,12,0
+Line=12,-8,12,8
+Line=18,-4,18,4
+Line=24,0,24,0
+
+[shapedef]
+Name=Minus.root
+Line=-2,0,2,0
+
+[shapedef]
+Name=Opamp5
+Root="Opamp.root",0,0,0
+Root="Plus.root",25,-4,0
+Root="Minus.root",25,52,0
+Line=32,56,32,34
+Line=32,-8,32,13
+
+[shapedef]
+Name=Opamp.root
+Line=0,48,6,48
+Line=0,0,5,0
+Line=6,-4,6,52
+Line=6,-4,48,24
+Line=6,52,48,24
+Line=48,24,72,24
+Line=10,12,14,12
+Line=12,10,12,14
+Line=10,36,14,36
+Line=4,0,6,0
+
+[shapedef]
+Name=Photodiode3
+Root="Diode.root",0,48,0
+Line=16,22,22,28
+Line=10,28,16,34
+PolyClosed=3
+PolyLine=20,30
+PolyLine=24,26
+PolyLine=24,30
+PolyClosed=3
+PolyLine=14,36
+PolyLine=18,32
+PolyLine=18,36
+Ellipse=-2,-2,2,2
+FColor=None
+Ellipse=46,-2,50,2
+FColor=None
+Line=8,6,8,10
+Line=10,8,6,8
+
+[shapedef]
+Name=Plus.root
+Line=-2,0,2,0
+Line=0,-2,0,2
+
+[shapedef]
+Name=Resistor
+PolyOpen=12
+PolyLine=0,0
+PolyLine=0,0
+PolyLine=12,0
+PolyLine=14,-4
+PolyLine=18,4
+PolyLine=22,-4
+PolyLine=26,4
+PolyLine=30,-4
+PolyLine=34,4
+PolyLine=36,0
+PolyLine=48,0
+PolyLine=48,0
+Current=32,8,16,8
+
+[compdef]
+Name=Ground
+Definition=Ground
+Shape=Ground
+Mask=1793
+Used=249
+memo=Ground
+Label Offset=0,0,0,0
+PinCnt=1
+Pin="PinA",0,0,-3,-7
+
+[compdef]
+Name=Opamp
+Definition=Opamp
+Shape=Opamp5
+Mask=5121
+Used=5
+memo=Opamp
+Label Offset=44,29,-14,39
+PinCnt=5
+Pin="Plus input",0,0,-31,-7
+Pin="Minus input",0,6,-33,20
+Pin="VEE",4,7,3,-5
+Pin="Output",9,3,-13,-4
+Pin="VCC",4,-1,5,14
+
+[compdef]
+Name=Capacitor
+Definition=Capacitor
+Shape=Capacitor
+Mask=7425
+Used=45
+memo=Capacitor
+Label Offset=16,12,12,12
+PinCnt=2
+Pin="Plus",6,0,-3,-5
+Pin="Minus",0,0,-14,-5
+
+[compdef]
+Name=Resistor
+Definition=Resistor
+Shape=Resistor
+Mask=6145
+Used=152
+memo=Resistor
+Label Offset=18,6,8,11
+PinCnt=2
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
+
+[compdef]
+Name=LF347
+Definition=Opamp
+Shape=Opamp5
+Mask=4224
+Used=4
+memo=Wide Bandwidth Quad JFET Input/Output Opamp
+Label Offset=51,32,-15,46
+PinCnt=5
+Pin="Plus input",0,0,-30,-3
+Pin="Minus input",0,6,-36,17
+Pin="VEE",4,7,6,5
+Pin="Output",9,3,-13,-4
+Pin="VCC",4,-1,6,4
+
+[compdef]
+Name=SFH2735
+Definition=NULL
+Shape=Photodiode3
+Mask=4224
+Used=1
+memo=Photodiode
+Label Offset=16,58,-19,10
+PinCnt=0
+
+[compdef]
+Name=Battery
+Definition=Battery
+Shape=Battery
+Mask=7937
+Used=56
+memo=Battery
+Label Offset=19,7,10,13
+PinCnt=2
+Pin="Plus",6,0,-4,-5
+Pin="Minus",0,0,-10,-5
+
+[Circuit]
+Window Placement=0,3, -1,-1, -4,-23, 44,44,1306,631
+Default Object=Color=#000080
+Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
+Default Object Apply Border To Text=No
+Default Object Apply Fill To Text=No
+Default Object GridSnap=No
+NodeVoltageFormat=3
+CurrentFormat=3
+PowerFormat=3
+PathDelayFormat=3
+WarningFormat=3
+GridTextFormulaFormat=3
+SpiceType=AMBIGUOUS
+Title_Block_Border=None
+Title_Block=False
+Show Nodes=False
+Show Voltages=False
+Show Current=False
+Show Power=False
+Show Condition=False
+Show Pin Connections=False
+Show Connection Warnings=False
+Show Cross=False
+Show Attribute Text=True
+Show Grid Text=True
+
+[Comp]
+Name=Ground
+Px=344,448
+Rot=7
+
+[Comp]
+Name=Opamp
+Px=352,448
+Rot=4
+
+[Attr]
+ON=9,21,PART
+V=LF347
+Style=8192
+
+[Attr]
+ON=44,-57,MODEL
+V=LF347
+
+[Attr]
+ON=44,-85,PACKAGE
+V=DIP14
+
+[Comp]
+Name=Capacitor
+Px=400,304
+Rot=6
+
+[Attr]
+ON=-31,9,PART
+V=C2
+Style=8192
+
+[Attr]
+ON=-33,-25,CAPACITANCE
+V=22p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=352,344
+
+[Attr]
+ON=4,8,PART
+V=R1
+Style=8192
+
+[Attr]
+ON=25,9,RESISTANCE
+V=180k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=328,304,352,304
+
+[Wire]
+Pxs=328,304,328,344
+
+[Wire]
+Pxs=328,400,352,400
+
+[Wire]
+Pxs=328,344,352,344
+
+[Wire]
+Pxs=400,304,432,304
+
+[Wire]
+Pxs=432,304,432,344
+
+[Wire]
+Pxs=424,424,432,424
+
+[Wire]
+Pxs=400,344,432,344
+
+[Wire]
+Pxs=344,448,352,448
+
+[Comp]
+Name=Resistor
+Px=944,504
+
+[Attr]
+ON=15,-22,PART
+V=R4
+Style=8192
+
+[Attr]
+ON=11,9,RESISTANCE
+V=220k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=640,384
+Rot=6
+
+[Attr]
+ON=-32,-30,PART
+V=C3
+Style=8192
+
+[Attr]
+ON=-37,15,CAPACITANCE
+V=390p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=928,456
+Rot=6
+
+[Attr]
+ON=-34,-30,PART
+V=C4
+Style=8192
+
+[Attr]
+ON=-41,16,CAPACITANCE
+V=330p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=LF347
+Px=624,528
+Rot=4
+
+[Attr]
+ON=14,15,PART
+V=LF347
+Style=8192
+
+[Attr]
+ON=51,-46,MODEL
+V=LF347
+
+[Attr]
+ON=51,-74,PACKAGE
+V=DIP14
+
+[Attr]
+ON=51,-88,GATE
+V=A
+
+[Attr]
+ON=51,-102,COMPNAME
+V=UX1
+
+[Comp]
+Name=LF347
+Px=912,608
+Rot=4
+
+[Attr]
+ON=16,14,PART
+V=LF347
+Style=8192
+
+[Attr]
+ON=51,-46,MODEL
+V=LF347
+
+[Attr]
+ON=51,-74,PACKAGE
+V=DIP14
+
+[Attr]
+ON=51,-88,GATE
+V=A
+
+[Attr]
+ON=51,-102,COMPNAME
+V=UX1
+
+[Wire]
+Pxs=776,504,800,504
+
+[Wire]
+Pxs=856,504,896,504
+
+[Wire]
+Pxs=800,456,800,504
+
+[Wire]
+Pxs=800,456,880,456
+
+[Wire]
+Pxs=800,504,808,504
+
+[Wire]
+Pxs=928,456,1016,456
+
+[Wire]
+Pxs=1016,456,1016,504
+
+[Wire]
+Pxs=992,504,1016,504
+
+[Wire]
+Pxs=984,584,1016,584
+
+[Wire]
+Pxs=896,560,912,560
+
+[Comp]
+Name=Resistor
+Px=640,424
+
+[Attr]
+ON=21,-20,PART
+V=R2
+Style=8192
+
+[Attr]
+ON=17,11,RESISTANCE
+V=220k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=704,384,704,424
+
+[Wire]
+Pxs=688,424,704,424
+
+[Wire]
+Pxs=704,504,728,504
+
+[Wire]
+Pxs=496,424,512,424
+
+[Wire]
+Pxs=584,424,608,424
+
+[Wire]
+Pxs=512,384,512,424
+
+[Wire]
+Pxs=512,384,592,384
+
+[Wire]
+Pxs=640,384,704,384
+
+[Wire]
+Pxs=696,504,704,504
+
+[Wire]
+Pxs=608,480,624,480
+
+[Comp]
+Name=Capacitor
+Px=584,424
+Rot=6
+
+[Attr]
+ON=-33,-27,PART
+V=C5
+Style=8192
+
+[Attr]
+ON=-37,12,CAPACITANCE
+V=390p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=448,424
+
+[Attr]
+ON=17,-25,PART
+V=R5
+Style=8192
+
+[Attr]
+ON=18,10,RESISTANCE
+V=2k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=856,504
+Rot=6
+
+[Attr]
+ON=-39,-25,PART
+V=C6
+Style=8192
+
+[Attr]
+ON=-41,14,CAPACITANCE
+V=330p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=728,504
+
+[Attr]
+ON=19,-24,PART
+V=R3
+Style=8192
+
+[Attr]
+ON=19,13,RESISTANCE
+V=2k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=896,504,896,560
+
+[Wire]
+Pxs=1016,504,1016,584
+
+[Wire]
+Pxs=704,424,704,504
+
+[Wire]
+Pxs=608,424,608,480
+
+[Wire]
+Pxs=512,424,536,424
+
+[Wire]
+Pxs=432,424,448,424
+
+[Comp]
+Name=SFH2735
+Px=256,352
+
+[Attr]
+ON=6,59,PART
+V=OP999
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=304,400,328,400
+
+[Wire]
+Pxs=240,400,256,400
+
+[Comp]
+Name=Ground
+Px=240,400
+Rot=7
+
+[Comp]
+Name=Battery
+Px=616,320
+Rot=3
+
+[Attr]
+ON=-25,-31,PART
+V=V1
+Style=8192
+
+[Attr]
+ON=9,-31,VALUE
+V=12
+Style=8192
+
+[Comp]
+Name=Ground
+Px=616,328
+Rot=7
+
+[Comp]
+Name=Capacitor
+Px=544,272
+Rot=7
+
+[Attr]
+ON=-66,17,PART
+V=Cbypass1
+Style=8192
+
+[Attr]
+ON=12,17,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=616,264,696,264
+
+[Wire]
+Pxs=696,264,696,272
+
+[Wire]
+Pxs=616,328,696,328
+
+[Wire]
+Pxs=544,264,616,264
+
+[Wire]
+Pxs=544,328,616,328
+
+[Wire]
+Pxs=616,320,616,328
+
+[Wire]
+Pxs=544,320,544,328
+
+[Wire]
+Pxs=544,264,544,272
+
+[Wire]
+Pxs=616,264,616,272
+
+[Comp]
+Name=Capacitor
+Px=696,272
+Rot=7
+
+[Attr]
+ON=14,18,PART
+V=Cbypass2
+Style=8192
+
+[Attr]
+ON=-41,16,CAPACITANCE
+V=100n
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=696,320,696,328
+
+[Comp]
+Name=Battery
+Px=928,320
+Rot=3
+
+[Attr]
+ON=-25,-31,PART
+V=V2
+Style=8192
+
+[Attr]
+ON=9,-31,VALUE
+V=-12
+Style=8192
+
+[Comp]
+Name=Ground
+Px=928,328
+Rot=7
+
+[Comp]
+Name=Capacitor
+Px=856,272
+Rot=7
+
+[Attr]
+ON=-68,19,PART
+V=Cbypass3
+Style=8192
+
+[Attr]
+ON=12,17,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=928,264,1008,264
+
+[Wire]
+Pxs=1008,264,1008,272
+
+[Wire]
+Pxs=928,328,1008,328
+
+[Wire]
+Pxs=856,264,928,264
+
+[Wire]
+Pxs=856,328,928,328
+
+[Wire]
+Pxs=928,320,928,328
+
+[Wire]
+Pxs=856,320,856,328
+
+[Wire]
+Pxs=856,264,856,272
+
+[Wire]
+Pxs=928,264,928,272
+
+[Comp]
+Name=Capacitor
+Px=1008,272
+Rot=7
+
+[Attr]
+ON=14,18,PART
+V=Cbypass4
+Style=8192
+
+[Attr]
+ON=-41,16,CAPACITANCE
+V=100n
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1008,320,1008,328
+
+[Comp]
+Name=Ground
+Px=616,528
+Rot=7
+
+[Wire]
+Pxs=616,528,624,528
+
+[Comp]
+Name=Ground
+Px=904,608
+Rot=7
+
+[Wire]
+Pxs=904,608,912,608
+
+[Wire]
+Pxs=328,344,328,400
+
+[Wire]
+Pxs=432,344,432,424
+
+[Wire]
+Pxs=896,504,944,504
+
+[Wire]
+Pxs=608,424,640,424
+
+[Grid Text]
+Text="VCC"
+Px=384,456
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VEE"
+Px=384,392
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VEE"
+Px=656,472
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VCC"
+Px=656,536
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VEE"
+Px=944,552
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VCC"
+Px=944,616
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="vOUT"
+Px=1016,584
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VCC"
+Px=616,264
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VEE"
+Px=928,264
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="vIN"
+Px=304,400
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Schematic]
+CurrentSection 0=0
+CurrentSection 1=0
+CurrentSection 2=0
+CurrentSection 3=0
+Splitter.xs=0
+Splitter.ys=0
+TextQuad=4099
+Scale=0.66666666666666663
+GridUser=10
+ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
+CalcRMS=False
+CalcAVG=False
+CalcPeak=False
+CalcVoltage=True
+DisplayMeasure=Last
+ShareScales=True
+
+[Tools]
+Pos=Top
+FILESAVEASOLD=No
+BOM=No
+FILEPCB=No
+PROBE=Yes
+SELECT=Yes
+PAN=Yes
+COMP=Yes
+TEXT=Yes
+WIRE=Yes
+WIRED=Yes
+BUS=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=Yes
+SPREAD_SHEET=Yes
+POLYCLOS=No
+POLYOPEN=No
+FLAG=Yes
+INFO=Yes
+HELP=Yes
+HELP_SPICE=No
+LINK=Yes
+CHECK=Yes
+REGION_ENABLE=Yes
+TITLE_BLOCK=Yes
+DIGTRC=No
+DIGTRC2=No
+BUILD_COMMAND=Yes
+DIGALL=No
+GRIDTEXT=Yes
+COMPTEXT=Yes
+NODE=Yes
+MEASURED=Yes
+NODEV=Yes
+CURRENT=Yes
+POWER=Yes
+CONDITIN=Yes
+PIN=Yes
+CONNWARN=Yes
+CROSS=Yes
+GRID=Yes
+BORDER=Yes
+BORDERONE=Yes
+TITLE=Yes
+RUBBER=Yes
+PROPERTY=Yes
+STEP=Yes
+MIRROR=Yes
+ROTATE=Yes
+FLIPY=Yes
+FLIPX=Yes
+CIR_MAKEMACRO=No
+CLEARCUTWIRE=No
+CLIPBOARDCIRPAGE2BMM=No
+FINDCOMP=Yes
+FIND=Yes
+REPEAT=No
+REPLACE=No
+MODEL=Yes
+CIR2CKT=Yes
+ATTDISP=Yes
+ENABLE=Yes
+DISABLE=Yes
+ENABLE_WITH=Yes
+TOFRONT=Yes
+TOBACK=Yes
+SELNEXT=Yes
+PAGEADD=Yes
+PAGEADDTEXT=No
+ADDSECTION=No
+PAGEDEL=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALECIR=Yes
+GOTOFLAG=Yes
+UPLEVEL=Yes
+COLOR=Yes
+FONT=Yes
+DM_LAST=No
+DM_RMS=No
+DM_AVG=No
+DM_PEAK=No
+GRID_NONE=No
+GRID_NORMAL=No
+GRID_BOLD_5=No
+GRID_BOLD_6=No
+GRID_BOLD_USER=No
+GRAPH_PAPER=No
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+RENAMEDEFINE=No
+RENAMECMP=No
+ATTALIGN=No
+RESETNODEPOS=No
+FIT2STANDARD=No
+NODESNAP=No
+MOVETEXT=No
+TEXTINC=No
+TOGGLETEXT=No
+TOGGLEMODE=No
+TOLERANCE=No
+ALIGNLEFT=Yes
+ALIGNRIGHT=Yes
+ALIGNTOP=Yes
+ALIGNBOTTOM=Yes
+
+[Section]
+Index=0
+Name="optical_link_receiver"
+Type=Main
+Enable=True
+CurrentPage 0=0
+CurrentPage 1=0
+CurrentPage 2=0
+CurrentPage 3=0
+TabSize 0=400
+TabSize 1=400
+TabSize 2=400
+TabSize 3=400
+
+[Page]
+Index=0
+Section=0
+Print=True
+Enable=True
+Name=Main
+PrinterScale=1
+Scale 0=1
+Scale 1=1
+Scale 2=1
+SB 3=152,192
+Scale 3=0.66666666666666663
+Px=758,635
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text RTF=False
+Grid Text Angle=0
+Grid Text GridSnap=True
+Grid Text PinIt=False
+Grid Text JustifyH=Left
+Grid Text JustifyV=Bottom
+Grid GradientColor2=None
+Grid OutlineThickness=1
+Grid OutlineColor=None
+Component Color=#0000FF
+Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
+Wire Color=#008000
+Bus Color=#009F00
+Pin Connection=Height=-10,FStyle=0,Color=#000000,Name=Arial
+Pin Marker Color=#008000
+Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
+Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
+Dynamic AC Voltage Color=#E4E4E4
+Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
+Title Block Background=#C0C0C0
+Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
+Digital Path Color=#FF0000
+Title Block Border=#000000
+Disabled	Color=#C0C0C0
+Search Color=#FFFF00
+Grid Color=#000000
+Graph Paper=#E4E4E4
+Digital 0 Color=#000000
+Digital R Color=#FFFF00
+Digital F Color=#FFFF00
+Digital 1 Color=#FF0000
+Digital X Color=#C0C0C0
+Digital Z Color=#808080
+Block Select Color=#51F998
+
+[Page]
+Index=1
+Section=0
+Type=Text
+Print=False
+Enable=True
+Name=Text
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Page]
+Index=2
+Section=0
+Type=Text
+Print=False
+Enable=True
+Name=Models
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Page]
+Index=3
+Section=0
+Type=Info
+Print=False
+Enable=True
+Name=Info
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Text Area]
+Section=0
+Page=1
+
+[Text Area]
+Section=0
+Page=2
+Text=* Schematic File
+Text=*
+Text=* Syntax:
+Text=* .MODEL <model name> [AKO:<reference model name>] <ModelType>
+Text=* +([<parameter name>=<value>][LOT[/#][/GAUSS|/UNIFORM|/WCASE]=[<tol>[%]] |[-<low>%,<high>%]][DEV[/#][/GAUSS|/UNIFORM|/WCASE]=[<tol>[%]]...)
+Text=* ModelType must be one of OPA,D,NPN,NMOS,NJF,PUL,SIN,TRN,CORE,GASFET,VSWITCH,ISWITCH,CAP,IND,RES,PNP,PMOS,PJF,DOUTPUT,DINPUT,UADC,UDAC,UGATE,UTGATE,UEFF,UGFF,UDLY,UPLD,UROM,URAM,UBGT,UIO,LPNP,NIGBT,I,V
+Text=*
+Text=*Examples:
+Text=* .MODEL 2N2222A NPN(BF=150 IS=1E-14)
+Text=* .model M1 NMOS(KP=2.5E-5 VTO=1.345 CGDO=14.67p CGBO=4.566p)
+Text=* .MODEL DK D(IS=1E-18)
+Text=* .model 2N2222A AKO:2N2222 NPN (BF=55 ISE=10F)
+Text=* .Model BJT1 NPN (RE=12 LOT/1/GAUSS=30% DEV/2/UNIFORM=2%)
+Text=*
+Text=* A .cir file is typically found in the data directory
+Text=*
+
+[InfoPage]
+InfoPage=True
+Warnings=True
+System=True
+Defines=True
+Array=True
+Model=True
+Measure=True
+MacroSubckt=True
+NotUsed=True
+ComponentCounts=True
+VariablizePaths=False
+DontShowPaths=False
+SimulationLog=True
+
+[Limits]
+Analysis=DynamicAC
+FirstValueDisplay=Mag
+SecondValueDisplay=PhaseDeg
+PlaceText=True
+
+[Limits]
+Analysis=DynamicDC
+PlaceText=True
+
+[Pane]
+Analysis=Transient
+
+[Pane]
+Analysis=AC
+
+[Pane]
+Analysis=DC
+
+[Pane]
+Analysis=HmDistortion
+
+[Pane]
+Analysis=ImDistortion
+
+[Pane]
+Analysis=Stability
+
+[WCTolerance]
+Var Width=100
+Nominal Width=72
+Tol Width=152
+Tol Name=Drift
+Col Width Neq=50
+Col Width Pos=50
+Col Width Rnd=50
+
+[WCFiles]
+UseFile=<Library>Standard.tlib
+AVAILABLE_FILE=<Library>Standard.tlib
+
+[OPMethods]
+Analysis=Transient
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=AC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=HmDistortion
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=ImDistortion
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=Stability
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DynamicAC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DynamicDC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
